@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food
+from .models import ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order
 
 @admin.register(ShopCategory)
 class ShopCategoryAdmin(admin.ModelAdmin):
@@ -39,3 +39,14 @@ class FoodAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'category')
     search_fields = ('name',)
     list_filter = ('category',)    
+# admin.site.register(Order)
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'total_price', 'payment_status', 'created_at')
+    search_fields = ('user__phone_number', 'user__id')  
+    list_filter = ('payment_status',)  
+
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        # print("Admin Panel Orders:", queryset)  # Debugging
+        return queryset

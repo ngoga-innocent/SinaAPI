@@ -1,6 +1,6 @@
-from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory
+from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order
 from rest_framework import serializers
-
+from decimal import Decimal
 
 
 class ShopCategorySerializer(serializers.ModelSerializer):
@@ -31,3 +31,11 @@ class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
         fields = ['id','name','foods']
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'
+        read_only_fields = ['id', 'user', 'total_price', 'created_at']
+
+
+

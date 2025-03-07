@@ -3,7 +3,7 @@ from .models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'phone_number', 'full_name', 'email', 'is_staff']
+        fields = ['id', 'phone_number', 'full_name', 'email', 'profile','is_staff']
 class RegisterUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     class Meta:

@@ -17,14 +17,16 @@ from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import SimpleUploadedFile
 from rest_framework.decorators import api_view
 from .serilaizers import PaymentSerializer
+import logging
+logger = logging.getLogger(__name__)
 load_dotenv()
 class PaymentView(APIView):
     permission_classes = [IsAuthenticated]  # Require authentication
 
     BASE_URL = "https://payments.paypack.rw/api"
-
-    def authenticate_paypack(self):
-        url = f"{self.BASE_URL}/auth/agents/authorize"
+    @staticmethod
+    def authenticate_paypack():
+        url = f"{PaymentView.BASE_URL}/auth/agents/authorize"
         payload = json.dumps({
             "client_id": os.getenv("PAYPACK_CLIENT_ID"),
             "client_secret": os.getenv("PAYPACK_CLIENT_SECRET")
@@ -40,25 +42,28 @@ class PaymentView(APIView):
     def post(self, request):
         phone_number = request.data.get("phone_number")
         amount = request.data.get("amount")
-        print(request.user)
-        print(phone_number,amount)
+        # print(request.user)
+        # print(phone_number,amount)
+        
+        return self.deposit(request.user,phone_number,amount)
+        # Authenticate with Paypack API
+    @staticmethod    
+    def deposit(user,phone_number,amount):
         if not phone_number or not amount:
             return Response({"error": "Phone number and amount are required"}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Authenticate with Paypack API
-        access_token = self.authenticate_paypack()
+        access_token = PaymentView.authenticate_paypack()
         # print(access_token)
         if not access_token:
             return Response({"error": "Failed to authenticate payment service"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         # Process payment request
-        url = f"{self.BASE_URL}/transactions/cashin"
+        url = f"{PaymentView.BASE_URL}/transactions/cashin"
         payload = json.dumps({"amount": amount, "number": phone_number})
         headers = {
             "Content-Type": "application/json",
             "Accept": "application/json",
             "Authorization": f"Bearer {access_token}",
-            "X-Webhook-Mode":"development"
+            "X-Webhook-Mode":"production"
         }
         
         response = requests.post(url, headers=headers, data=payload)
@@ -75,7 +80,7 @@ class PaymentView(APIView):
         # Save payment record in the database
         payment = Payment.objects.create(
             ref=ref,
-            customer=request.user,  # Authenticated user
+            customer=user,  # Authenticated user
             phone_number=phone_number,
             amount=amount,
             status=payment_status
@@ -87,49 +92,69 @@ class PaymentView(APIView):
     @staticmethod
     def generate_QrCode(customer_id, amount, transaction_ref, payment_id, payment_status):
         """Generate a QR code and attach it to the payment record."""
-        
-        # Prevent unnecessary processing if QR code already exists
+        print("generating QRCODE")
         try:
+            # Try to retrieve payment and log
             payment = Payment.objects.get(id=payment_id)
-            if payment.qr_code:  
+            print(f"Payment found: ID={payment.id}, Status={payment.status}, Amount={payment.amount}")
+            
+            if payment.qr_code:
+                print(f"QR code already exists for Payment ID={payment.id}")
                 return Response({"message": "QR Code already exists"}, status=200)
+
+            # Create the payment data dictionary
+            payment_data = {
+                'customer_id': customer_id,
+                'payment_id': str(payment_id),
+                'amount': str(amount),  # Convert Decimal to string
+                'status': payment_status,
+                'transaction_id': transaction_ref,
+                'timestamp': timezone.now().isoformat(),
+            }
+
+            logger.info(f"Payment data for QR code: {payment_data}")
+
+            # Convert the dictionary to a valid JSON string
+            payment_data_str = json.dumps(payment_data)
+            logger.info(f"JSON data for QR: {payment_data_str}")
+
+            # Generate the QR Code
+            qr = qrcode.QRCode(
+                version=1,
+                error_correction=qrcode.constants.ERROR_CORRECT_L,
+                box_size=10,
+                border=4,
+            )
+            qr.add_data(payment_data_str)
+            qr.make(fit=True)
+
+            # Convert QR Code to an image file
+            img = qr.make_image(fill='black', back_color='white')
+            img_io = BytesIO()
+            img.save(img_io, 'PNG')
+            img_io.seek(0)
+
+            # Convert to a Django file object
+            qr_code_file = ContentFile(img_io.getvalue(), name=f"{transaction_ref}_qrcode.png")
+
+            # Save QR code to the payment object
+            payment.qr_code.save(f"{transaction_ref}_qrcode.png", qr_code_file)
+            payment.save(update_fields=['qr_code'])
+            print(payment_data)
+            logger.info(f"QR code successfully generated and saved for Payment ID={payment.id}")
+            return Response({'qr_code': "QR Code generated and saved in database"}, status=200)
+
         except Payment.DoesNotExist:
+            logger.error(f"Payment with ID {payment_id} not found.")
             return Response({"error": "Payment not found"}, status=404)
 
-        # Create the payment data string
-        payment_data = {
-            'customer_id': customer_id,
-            'amount': amount,
-            'status': payment_status,
-            'transaction_id': transaction_ref,
-            'timestamp': timezone.now().isoformat(),
-        }
-        payment_data_str = str(payment_data)
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON parse error: {str(e)}")
+            return Response({"error": "Error in JSON data"}, status=500)
 
-        # Generate the QR Code
-        qr = qrcode.QRCode(
-            version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
-        )
-        qr.add_data(payment_data_str)
-        qr.make(fit=True)
-        
-        # Convert QR Code to an image file
-        img = qr.make_image(fill='black', back_color='white')
-        img_io = BytesIO()
-        img.save(img_io, 'PNG')
-        img_io.seek(0)
-
-        # Convert to a Django file object
-        qr_code_file = ContentFile(img_io.getvalue(), name=f"{transaction_ref}_qrcode.png")
-
-        # ✅ Correct way: Use `.save(update_fields=['qr_code'])`
-        payment.qr_code.save(f"{transaction_ref}_qrcode.png", qr_code_file)
-        payment.save(update_fields=['qr_code'])  # Avoid triggering `post_save` signal
-
-        return Response({'qr_code': "QR Code generated and saved in database"}, status=200)
+        except Exception as e:
+            logger.error(f"Unexpected error: {str(e)}")
+            return Response({"error": "Internal server error"}, status=500)
 @csrf_exempt
 @api_view(["POST", "HEAD"])
 def WebHook(request):
@@ -175,3 +200,15 @@ def checkPayment(request, payment_id):
         return Response({"data": "Payment not found"}, status=status.HTTP_404_NOT_FOUND)
    
 
+class ConfirmQrScan(APIView):
+    def post(self,request):
+        payment_id=request.data.get('payment_id')
+        try:
+            payment=Payment.objects.get(id=payment_id)
+            if payment.is_scanned:
+                return Response({"message":"Payment Already Scanned","valid":False},status=200)
+            payment.is_scanned=True
+            payment.save()
+            return Response({"message":"Qr Code Scanned Correctly","valid":True},status=201)
+        except Payment.DoesNotExist:
+            return Response({"message":"Invalid Payment","valid":False},status=400)
