@@ -9,7 +9,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
-
+from django.core.files.storage import default_storage
+from django.db.models import Q
 User = get_user_model()
 # Create your views here.
 class UserView(APIView):
@@ -48,7 +49,7 @@ class LoginView(APIView):
         if not phone_number or not password:
             return Response({"error": "Phone number and password are required"}, status=status.HTTP_400_BAD_REQUEST)  # missing required field(s)
         try:
-            user = User.objects.get(phone_number=phone_number)
+            user = User.objects.get(Q(phone_number=phone_number) | Q(email=phone_number))
             if not user:
                 return Response({"error": "Incorrect Phone number please Try again later"}, status=status.HTTP_404_NOT_FOUND)
             if not user.check_password(password):
@@ -75,4 +76,50 @@ class ProfileView(APIView):
         user = request.user
         serializer = UserSerializer(user)
         return Response({"user_data":serializer.data})    
-        
+    def put(self, request):
+        """Partially update user profile fields"""
+        try:
+            user = request.user
+            serializer = UserSerializer(user, data=request.data, partial=True)  # Partial update
+            if serializer.is_valid():
+                serializer.save()
+                return Response({"message": "Profile updated successfully", "user_data": serializer.data}, status=status.HTTP_200_OK)
+            print(serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            print(e)
+            return Response(
+                {"error": "Something went wrong", "details": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+    def patch(self, request):
+        """Change user password without using a serializer"""
+        user = request.user
+        data = request.data
+
+        # Extract old and new password
+        old_password = data.get("old_password")
+        new_password = data.get("new_password")
+        # confirm_password = data.get("confirm_password")
+
+        # Validate required fields
+        if not old_password or not new_password:
+            return Response(
+                {"error": "All fields (old_password, new_password) are required"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # Check if old password is correct
+        if not user.check_password(old_password):
+            return Response({"error": "Old password is incorrect"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Check if new password matches confirmation
+        # if new_password != confirm_password:
+        #     return Response({"error": "New passwords do not match"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Change password and save
+        user.set_password(new_password)
+        user.save()
+
+        return Response({"message": "Password updated successfully"}, status=status.HTTP_200_OK)    
