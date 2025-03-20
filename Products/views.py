@@ -54,9 +54,13 @@ class ShopCategoryView(APIView):
         return Response({"data": serializer.data}, status=200)
 class FoodCategoryView(APIView):
     def get(self, request, *args, **kwargs):
-        food_categories = FoodCategory.objects.all()
-        serializer=FoodCategorySerializer(food_categories, many=True, context={"request": request})
-        return Response({"data": serializer.data}, status=200)
+        try:
+            food_categories = FoodCategory.objects.all()
+            serializer=FoodCategorySerializer(food_categories, many=True, context={"request": request})
+            return Response({"data": serializer.data}, status=200)
+        except Exception as e:
+            print(e)
+            return Response({"error": str(e)}, status=500)
 class OrderCreateAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     def get(self,request):
@@ -73,7 +77,7 @@ class OrderCreateAPIView(APIView):
             food_ids = request.data.get('food_ids', [])
             accompaniment_ids = request.data.get('accompaniment_ids', [])
             phone_number = request.data.get("phone_number")
-
+            amount=request.data.get("amount")
             # ✅ Fetch products, foods, and accompaniments
             products = Product.objects.filter(id__in=product_ids)
             foods = Food.objects.filter(id__in=food_ids)
@@ -111,7 +115,7 @@ class OrderCreateAPIView(APIView):
             # ✅ Create the order
             order = Order.objects.create(
                 user=user,
-                total_price=Decimal(total_price),
+                total_price=Decimal(amount),
                 payment_status="pending",
                 preparation_time=preparation_time  # Assign computed prep time
             )
@@ -122,7 +126,7 @@ class OrderCreateAPIView(APIView):
             order.accompaniments.set(accompaniments)
 
             # ✅ Trigger Payment
-            payment_response = PaymentView.deposit(request.user, phone_number, int(total_price))
+            payment_response = PaymentView.deposit(request.user, phone_number, int(amount))
             if isinstance(payment_response, Response) and payment_response.status_code == 200:
                 payment_id = payment_response.data.get("payment_id")  # Extract payment ID
                 print("DEBUG: Payment ID ->", payment_id)
