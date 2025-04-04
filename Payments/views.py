@@ -203,6 +203,7 @@ def checkPayment(request, payment_id):
 class ConfirmQrScan(APIView):
     def post(self,request):
         payment_id=request.data.get('payment_id')
+        
         try:
             payment=Payment.objects.get(id=payment_id)
             if payment.is_scanned:

@@ -30,7 +30,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     country=models.CharField(max_length=255,null=True,blank=True)
     phone_number = models.CharField(max_length=20, unique=True, null=False)
     email = models.EmailField(max_length=255, blank=True, null=True)
-    profile=models.ImageField(upload_to='profile_images/', blank=True, null=True,default='../static/images/default_profile.jpg')
+    profile=models.ImageField(upload_to='profile_images/', blank=True, null=True,default='profile_images/default_profile.jpg')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
