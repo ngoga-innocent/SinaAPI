@@ -2,8 +2,8 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
-from .models import ChatRoom, Message,MessageReadStatus
-from .serializers import MessageSerializer,ChatRoomSerializer
+from .models import ChatRoom, Message,MessageReadStatus,FAQs
+from .serializers import MessageSerializer,ChatRoomSerializer,FAQsSerializer
 from rest_framework.views import APIView
 from django.utils.timezone import now,datetime
 from rest_framework.decorators import api_view
@@ -215,3 +215,14 @@ def mark_messages_as_read(request, room_id):
         read_status.save()
 
     return Response({"message": "Messages marked as read"}, status=status.HTTP_200_OK)
+class FAQsView(APIView):
+    def get(self, request):
+        faqs = FAQs.objects.all()
+        serializer=FAQsSerializer(faqs,many=True)
+        return Response(serializer.data,status=status.HTTP_200_OK)
+class SearchFaqs(APIView):
+    def get(self,request):
+        query=request.GET.get('query')
+        faqs=FAQs.objects.filter(question__icontains=query)
+        serializer=FAQsSerializer(faqs,many=True)
+        return Response(serializer.data,status=status.HTTP_200_OK)

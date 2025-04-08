@@ -88,3 +88,10 @@ class MessageReadStatus(models.Model):
     class Meta:
         verbose_name_plural='Message Statuses'
         unique_together = ('message', 'user')  # Ensure each user has only one read status per message
+class FAQs(models.Model):
+    question=models.CharField(max_length=255)
+    answer=models.TextField(null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name_plural='Frequently Asked Questions'

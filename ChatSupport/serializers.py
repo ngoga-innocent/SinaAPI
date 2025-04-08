@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Message,ChatRoom,MessageReadStatus
+from .models import Message,ChatRoom,MessageReadStatus,FAQs
 from Auths.models import User
 from Auths.serializers import UserSerializer
 class MessageSerializer(serializers.ModelSerializer):
@@ -42,5 +42,7 @@ class ChatRoomSerializer(serializers.ModelSerializer):
         return 0  # Default to 0 if request/user is missing
     # Default to 0 if request is None or unauthenticated
 
-
-
+class FAQsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FAQs
+        fields = ['id', 'question', 'answer', 'created_at']

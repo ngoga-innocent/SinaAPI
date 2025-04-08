@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Message, ChatRoom,MessageReadStatus
+from .models import Message, ChatRoom,MessageReadStatus,FAQs
 
 # Inline configuration for Message
 class MessageInline(admin.StackedInline):
@@ -24,3 +24,7 @@ class MessageAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('id', 'is_read','staff_read', 'read_at')  # Ensure 'message' is the correct field name
     list_filter = ('read_at','is_read',)   
+@admin.register(FAQs)
+class FaqAdmin(admin.ModelAdmin):
+    list_display=('question',)
+    list_filter=('question',)
