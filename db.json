@@ -1,0 +1,4397 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-04-05T15:00:56.155Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "object_repr": "Main Meal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-04-05T15:02:00.185Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "object_repr": "Meat",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-04-05T15:04:25.854Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "object_repr": "Sauce",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-04-05T15:04:48.298Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "db72361f-8ed2-4c8e-a8da-f19dfe83e68e",
+    "object_repr": "Salad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-04-05T15:05:31.546Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10d24cc2-8a9c-4839-9d9e-06695e5625b1",
+    "object_repr": "Spices and Appetizers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-04-05T15:05:56.708Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "object_repr": "Vege",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-04-05T15:06:29.532Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "72c4a0c4-5179-42aa-8071-692c640dac03",
+    "object_repr": "Drinks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-04-05T15:20:55.080Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "object_repr": "Vegetation",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-04-05T18:08:15.290Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "FAQs object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-04-05T18:08:45.594Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "FAQs object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-04-06T14:25:16.292Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14cbd7cc-c01f-43c1-9a62-e6aec047eff5",
+    "object_repr": "Food Menu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-04-06T14:25:30.603Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "d42a1da8-c962-446b-82b8-4275e4816ad5",
+    "object_repr": "sn",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-04-06T14:26:44.739Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3a76a95d-88a5-4412-bc49-41ef5c216e64",
+    "object_repr": "Coffee",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-04-06T14:27:01.802Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "b2fa8732-2858-40bd-94ec-ba543d58daf1",
+    "object_repr": "Grill",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-04-06T14:27:20.542Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "83d4d48e-1452-4cf2-b310-c18b815f8dd1",
+    "object_repr": "Drinks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-04-06T14:27:50.924Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "877369a9-17f7-4bce-9290-28e2cdf8dad9",
+    "object_repr": "Snacks",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-04-06T14:28:03.566Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "d42a1da8-c962-446b-82b8-4275e4816ad5",
+    "object_repr": "sn",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-04-06T14:38:08.311Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b1d2c533-c747-4a98-8a26-5355badc1f18",
+    "object_repr": "Soda",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-04-06T14:38:49.601Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6a62f951-8e41-454a-8d84-c3c44abb0ac2",
+    "object_repr": "Milkshake",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-04-06T14:39:20.429Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "31bd99e7-34d5-4e50-9d7d-8a454c775ec1",
+    "object_repr": "smoothie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-04-06T14:39:59.897Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "c1bc1ced-26a4-4604-bba0-1d67cea02136",
+    "object_repr": "Juice",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-04-06T14:41:27.550Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "e46ffb8e-8b14-440a-b3f9-440500605a90",
+    "object_repr": "Cassava",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-04-06T14:42:34.228Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "8390427c-fb97-48b0-bf06-71e574f0c412",
+    "object_repr": "Fries",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-04-06T14:43:39.307Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "eadd926f-ecd3-4bc7-b9b2-3a47223de4a1",
+    "object_repr": "Millet",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-04-06T14:44:25.833Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1048b20b-9f78-4bd2-b50f-b854329da70e",
+    "object_repr": "Pilao",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-04-06T14:45:10.668Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "63c59046-cd06-4158-a7ea-0559ef4129af",
+    "object_repr": "Rice",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-04-06T14:46:01.279Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "816387fa-3815-4603-9d40-b34f689cd9a3",
+    "object_repr": "matoke",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-04-06T14:46:59.450Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "74493648-79d1-4d76-ae00-77f2f622a889",
+    "object_repr": "Spaghetti",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-04-06T14:47:54.977Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "fb632619-3997-4cb4-a9b7-a303438097e1",
+    "object_repr": "Ugali",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-04-06T14:49:07.344Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "273e4846-480d-4d09-8f52-0e28fc8535ac",
+    "object_repr": "Beef",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-04-06T14:49:56.516Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "aef10152-df1e-4a0c-906f-c4ba79bab42d",
+    "object_repr": "Goat",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-04-06T14:51:11.573Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "81f1c424-3658-4d35-a7cc-7194221ae1dd",
+    "object_repr": "Chicken",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-04-06T14:51:49.964Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "981c6a42-ae8d-4adf-a0d6-0b3e38fcc05c",
+    "object_repr": "Pork",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-04-06T14:52:29.832Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "fb99fe2e-04de-4f81-b49f-813fb0605fa2",
+    "object_repr": "Fish",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-04-06T14:53:59.080Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "95f8176b-f020-426f-9311-62f51678adcd",
+    "object_repr": "Chicken Salad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-04-06T14:54:29.001Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "9625df77-0ca7-4cdc-aadb-8ad3572039f5",
+    "object_repr": "Chicken Salad cucumber",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-04-06T14:54:59.188Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b4b83da1-799b-4b40-b63a-aac10239c106",
+    "object_repr": "Plain Salad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-04-06T14:56:23.694Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b55917f3-b470-47c3-971b-499eea91a886",
+    "object_repr": "Mushroom Soup",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-04-06T14:57:02.987Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b049d002-e35e-4e69-8f3e-b2c35576b4ff",
+    "object_repr": "Boilo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-04-06T14:58:21.383Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "02dce450-5385-41d9-a176-ec264cc18d3c",
+    "object_repr": "Fish Sauce",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-04-06T14:59:27.910Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "8e6822a2-deeb-4fc6-830d-84fb4f9f41f2",
+    "object_repr": "Goat",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-04-06T15:01:12.217Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "7f5ef989-fdca-42db-a628-2cdc50a5aa24",
+    "object_repr": "Chicken tomato",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-04-06T15:02:21.927Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "74a11e22-cb07-4ef1-a133-bb0d28d248f5",
+    "object_repr": "Potato",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-04-06T15:02:55.635Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "0d1898fc-bbf1-4652-bc82-41a947a70dbf",
+    "object_repr": "Sweet Potato",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-04-06T15:04:52.515Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b51ea73e-e0f0-41fd-9655-e74bc906d984",
+    "object_repr": "Mayonnaise",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-04-06T15:05:33.727Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "adc0ee25-788c-431d-ba4b-af1a96bc108c",
+    "object_repr": "Ketch up",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-04-06T15:06:03.026Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "94f6b02d-c42f-4d23-9c92-da12c57ff09b",
+    "object_repr": "Chili",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-04-06T15:06:46.232Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "object_repr": "Veggies",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-04-06T15:08:06.623Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "0eec3314-9ec8-460e-833a-8c6c3d242f44",
+    "object_repr": "Spinach",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-04-06T15:08:31.728Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "b450d02f-2789-4bda-b6cb-c60028761717",
+    "object_repr": "Cassava leaves",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-04-06T15:09:02.482Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "08249dc6-f5c6-4828-9515-0a668508a916",
+    "object_repr": "Beans",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-04-06T15:09:35.093Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "726ee4eb-95d9-42c5-84a1-a41367eda148",
+    "object_repr": "Ice Cream",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-04-06T15:11:34.060Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4",
+    "object_repr": "Store",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-04-06T15:16:19.049Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "55794673-7693-4d7b-98f5-7d0fa04b3657",
+    "object_repr": "coffee mocha",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-04-06T15:18:20.243Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "60cf22f2-bad8-491f-957b-c4d593a5f8e2",
+    "object_repr": "vanilla",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-04-06T15:19:29.168Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2498af7f-58bc-4038-bc1f-f52b0695398e",
+    "object_repr": "chocolate",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-04-06T15:20:28.646Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e123aab9-4983-4a6a-90f8-6fb444ff557e",
+    "object_repr": "strawberry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-04-06T15:21:36.652Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "780cb1f9-1717-4ce2-98f1-834339977d1b",
+    "object_repr": "Butterscotch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-04-06T15:24:30.142Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "32b4a7e9-def0-4474-8afc-f65e0d8993b9",
+    "object_repr": "Banana Milk shake",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-04-07T09:07:01.246Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "32b4a7e9-def0-4474-8afc-f65e0d8993b9",
+    "object_repr": "Banana Milk shake",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-04-10T07:13:24.859Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "55eca8cc-ccdd-4334-9a4e-1dd01095b306",
+    "object_repr": "Payment object (55eca8cc-ccdd-4334-9a4e-1dd01095b306)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-04-10T12:07:33.302Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e1ec1ad5-69a7-4de7-a88b-0bda5dc08932",
+    "object_repr": "Agashya",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-04-10T12:09:24.991Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "a5b11446-9998-419b-833c-55078a47dfb5",
+    "object_repr": "Agashya",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-04-10T12:11:49.881Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "42326c2b-5688-44ae-b358-b96bef61db5a",
+    "object_repr": "Akabanga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-04-10T12:12:54.442Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "ac1b4924-64e0-4942-a541-ccff8095221a",
+    "object_repr": "Akabanga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-04-10T12:15:05.166Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "42326c2b-5688-44ae-b358-b96bef61db5a",
+    "object_repr": "Akabanga",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-04-10T12:15:26.453Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "ac1b4924-64e0-4942-a541-ccff8095221a",
+    "object_repr": "Akabanga",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-04-10T12:27:23.135Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8c64befb-1b0c-42de-bc48-37407bd29f59",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-04-10T12:28:19.596Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "099d9adc-f2b8-4470-9f36-10b739e9b2e9",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-04-10T12:28:21.859Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8072b759-d249-41a4-87ad-a7b66e67bde5",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-04-10T12:31:16.500Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "067785ba-fdf9-4dbc-bbe2-f14049fd8c98",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-04-10T12:32:26.123Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1694ab4e-04e3-4d07-a9cc-8e6aa559d661",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-04-10T12:33:41.101Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "40ccf101-e964-4930-9538-84f4fa486390",
+    "object_repr": "Akarabo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-04-10T12:35:58.495Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "067785ba-fdf9-4dbc-bbe2-f14049fd8c98",
+    "object_repr": "Akanozo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\", \"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-04-10T12:36:59.145Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8c64befb-1b0c-42de-bc48-37407bd29f59",
+    "object_repr": "Akanozo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-04-10T12:38:11.179Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "099d9adc-f2b8-4470-9f36-10b739e9b2e9",
+    "object_repr": "Akanozo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-04-10T12:38:30.049Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8072b759-d249-41a4-87ad-a7b66e67bde5",
+    "object_repr": "Akanozo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-04-10T13:35:58.401Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "99e982ab-bd9a-49a1-8917-81d2f82dc6f5",
+    "object_repr": "Akaryoshye",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-04-10T13:39:18.388Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d4889173-5ad2-4dee-9d2f-fa6ce2fa5a31",
+    "object_repr": "Akawe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-04-10T13:40:21.580Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3a7cbef6-6323-4c93-80a0-d3d73427296e",
+    "object_repr": "Akawe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-04-10T13:41:11.905Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b50221d9-978c-49ba-b1aa-115c2c020505",
+    "object_repr": "Akawe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-04-11T09:29:47.424Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1986e48e-f8c5-4f79-8290-848d338a262e",
+    "object_repr": "Urwibutso",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-04-11T09:30:41.691Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "0524e3db-dd85-41c7-8204-dc17ddb86bd9",
+    "object_repr": "HOT KETCHUP",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-04-11T09:32:05.957Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "45f67cc8-d339-495f-84f0-bafb4be84976",
+    "object_repr": "Pain coupe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-04-11T09:33:51.968Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "001a7a57-9028-4e3d-9342-806351242aa1",
+    "object_repr": "Agashya",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-04-11T09:34:25.684Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1d802837-7db0-4b9a-9032-caf5bd5a3dea",
+    "object_repr": "Strawberry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-04-11T09:34:46.454Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1d802837-7db0-4b9a-9032-caf5bd5a3dea",
+    "object_repr": "Strawberry",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-04-11T09:45:22.991Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d0e342df-6790-4dab-80ff-74344d133fa0",
+    "object_repr": "Agashya",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-04-15T09:06:33.503Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5728170a-5ce9-4651-bb82-87e57dce7ac4",
+    "object_repr": "Store",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-04-15T09:06:58.924Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9b74d144-e40f-42be-8515-e16fd547e09e",
+    "object_repr": "Restaurant",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-04-15T09:07:23.908Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9f175121-20a8-43b7-bd7e-674437a52b38",
+    "object_repr": "Grill",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-04-15T09:07:50.002Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "b86b7a6a-c993-4869-85b6-667ee5d7c76a",
+    "object_repr": "Ice cream",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-04-15T09:08:12.014Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3cdf7c87-aa6d-4294-8138-f494f76168d2",
+    "object_repr": "Coffee",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-04-15T09:10:30.484Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e45c229d-205a-4e4e-94a5-e743bdfe881f",
+    "object_repr": "chocolate ice cream",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-04-15T09:11:20.108Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8fac1821-b76e-4e60-afa8-3edc3212066b",
+    "object_repr": "strawberry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-04-15T09:12:16.367Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4979db38-3dc9-45d3-8810-fd0ac60642d6",
+    "object_repr": "Butterscotch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-04-15T09:13:01.845Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "21d8c5ea-2db0-432d-9e5b-0a25cd21bd11",
+    "object_repr": "Banana Milk shake",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-04-15T09:14:00.043Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4fd5cfc4-b2ea-4155-8dce-4517a466ff8b",
+    "object_repr": "chicken",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-04-15T09:15:06.532Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13ce5137-60e6-4bc4-aa09-f308a3ffca9f",
+    "object_repr": "Zingaro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-04-15T09:17:21.573Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "0086dd91-552e-48d3-9e90-b5d579384ea6",
+    "object_repr": "Beef liver",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-04-15T09:18:29.800Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "643ff593-f54e-41c2-8238-972382d4188a",
+    "object_repr": "Beef",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-04-15T09:18:53.580Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13ce5137-60e6-4bc4-aa09-f308a3ffca9f",
+    "object_repr": "Zingaro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Delivery time\", \"Preparation time\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-04-15T09:19:08.365Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13ce5137-60e6-4bc4-aa09-f308a3ffca9f",
+    "object_repr": "Zingaro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is pick and go\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-04-15T09:19:43.179Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4fd5cfc4-b2ea-4155-8dce-4517a466ff8b",
+    "object_repr": "chicken",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is pick and go\", \"Delivery time\", \"Preparation time\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-04-15T09:20:54.440Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "398db8ab-b57c-45d9-940b-bdf3f4699847",
+    "object_repr": "Ugali",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-04-15T09:23:02.355Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2ce94301-08bc-41b3-8f0e-eafddc8094c5",
+    "object_repr": "Rice",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-04-15T09:24:31.719Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "47a36b6c-c9a3-4941-9713-f97ddddf288e",
+    "object_repr": "Chips",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-04-15T09:25:27.538Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e054c723-f508-4ccd-9c6b-779457bc0658",
+    "object_repr": "Potato",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-04-15T09:26:44.050Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "a863fa2d-605b-49e5-b85f-225dfc7c6ef4",
+    "object_repr": "Pilao",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-04-15T09:29:03.764Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2eae85a4-d79d-440a-9bf3-1962cb84aa22",
+    "object_repr": "latin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-04-15T09:34:45.801Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b5b5d763-a8c3-4617-a36c-b0dcb36e4dbc",
+    "object_repr": "Americano",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-04-15T09:38:11.567Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "f09d4a2f-5268-4ba3-a457-0d4a498f5d47",
+    "object_repr": "cappucino",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-04-15T09:39:01.357Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "c505826e-63dd-43cd-bacf-51522689a3f6",
+    "object_repr": "Espresso",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-04-15T09:40:25.051Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "eef9f6ec-75b0-4085-9ca5-712a071a6631",
+    "object_repr": "Agashya",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-04-15T09:40:54.156Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b0024572-b7fb-4065-80b1-7c43145d4b99",
+    "object_repr": "Akabanga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-04-15T09:43:22.584Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d3354b62-5a6d-4d74-ab6b-3cfdf9ed9e23",
+    "object_repr": "Akandi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-04-15T09:44:34.550Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b67b7de4-bb56-4bf1-8a0b-c7edb17d9160",
+    "object_repr": "Akanozo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-04-15T09:46:16.650Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6592d4ce-9fa2-4917-9a5f-d3177206a4c2",
+    "object_repr": "Akarabo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-04-15T09:48:41.147Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "c3ef80ef-a6ce-429d-8d66-5e32c5264e99",
+    "object_repr": "Akarusho",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-04-15T09:51:12.057Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "aefe12fd-d2af-46f2-bc28-acf27c42c99c",
+    "object_repr": "Akaryoshye",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-04-15T09:52:44.617Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "600ac377-504f-4f66-b08f-9a609f6d01cf",
+    "object_repr": "Akawe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-04-15T09:55:17.559Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2303e55c-bfd1-45c7-9c58-a7efdfdc4534",
+    "object_repr": "strawberry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-04-15T09:56:34.428Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "780b09db-0ae7-4fb8-8d05-8ccf42fd8a22",
+    "object_repr": "Urwibutso",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-04-15T09:59:13.430Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "66ceee98-1854-4ae6-bb53-9adb8841fa5d",
+    "object_repr": "Ketch up",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-04-15T10:02:08.725Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5a66aa05-7008-49ce-b893-56bf002c99e4",
+    "object_repr": "pain coupe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-04-15T10:14:56.843Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d4ee0236-8c10-4f4f-b938-aa00864de26c",
+    "object_repr": "pain coupe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-04-15T10:22:45.354Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d4ee0236-8c10-4f4f-b938-aa00864de26c",
+    "object_repr": "pain coupe",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-04-15T10:23:32.952Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5a66aa05-7008-49ce-b893-56bf002c99e4",
+    "object_repr": "pain coupe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-04-15T10:23:48.578Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "66ceee98-1854-4ae6-bb53-9adb8841fa5d",
+    "object_repr": "Ketch up",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-04-15T10:24:43.754Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "780b09db-0ae7-4fb8-8d05-8ccf42fd8a22",
+    "object_repr": "Urwibutso",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\", \"Shop category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-04-15T10:25:21.279Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "780b09db-0ae7-4fb8-8d05-8ccf42fd8a22",
+    "object_repr": "Urwibutso",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-04-15T10:25:37.586Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2303e55c-bfd1-45c7-9c58-a7efdfdc4534",
+    "object_repr": "strawberry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-04-15T10:26:00.488Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "600ac377-504f-4f66-b08f-9a609f6d01cf",
+    "object_repr": "Akawe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\", \"Shop category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-04-15T10:26:23.067Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "aefe12fd-d2af-46f2-bc28-acf27c42c99c",
+    "object_repr": "Akaryoshye",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-04-15T10:26:51.376Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "c3ef80ef-a6ce-429d-8d66-5e32c5264e99",
+    "object_repr": "Akarusho",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\", \"Shop category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-04-15T10:27:01.464Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "aefe12fd-d2af-46f2-bc28-acf27c42c99c",
+    "object_repr": "Akaryoshye",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-04-15T10:27:29.635Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6592d4ce-9fa2-4917-9a5f-d3177206a4c2",
+    "object_repr": "Akarabo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-04-15T10:27:50.087Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b67b7de4-bb56-4bf1-8a0b-c7edb17d9160",
+    "object_repr": "Akanozo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-04-15T10:28:10.893Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b0024572-b7fb-4065-80b1-7c43145d4b99",
+    "object_repr": "Akabanga",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-04-15T10:29:44.854Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "eef9f6ec-75b0-4085-9ca5-712a071a6631",
+    "object_repr": "Agashya",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-04-15T10:36:05.780Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "c505826e-63dd-43cd-bacf-51522689a3f6",
+    "object_repr": "Espresso",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-04-15T10:36:18.676Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "f09d4a2f-5268-4ba3-a457-0d4a498f5d47",
+    "object_repr": "cappucino",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-04-15T10:36:31.470Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b5b5d763-a8c3-4617-a36c-b0dcb36e4dbc",
+    "object_repr": "Americano",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-04-15T10:37:27.353Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2eae85a4-d79d-440a-9bf3-1962cb84aa22",
+    "object_repr": "latin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-04-15T10:38:12.188Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "a863fa2d-605b-49e5-b85f-225dfc7c6ef4",
+    "object_repr": "Pilao",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-04-15T10:38:33.882Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e054c723-f508-4ccd-9c6b-779457bc0658",
+    "object_repr": "Potato",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-04-15T10:38:50.969Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "47a36b6c-c9a3-4941-9713-f97ddddf288e",
+    "object_repr": "Chips",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-04-15T10:39:12.693Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2ce94301-08bc-41b3-8f0e-eafddc8094c5",
+    "object_repr": "Rice",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-04-15T10:39:26.982Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "398db8ab-b57c-45d9-940b-bdf3f4699847",
+    "object_repr": "Ugali",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-04-15T10:39:48.573Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "643ff593-f54e-41c2-8238-972382d4188a",
+    "object_repr": "Beef",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-04-15T10:40:02.580Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "398db8ab-b57c-45d9-940b-bdf3f4699847",
+    "object_repr": "Ugali",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-04-15T10:40:28.267Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "0086dd91-552e-48d3-9e90-b5d579384ea6",
+    "object_repr": "Beef liver",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-04-15T10:40:54.065Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13ce5137-60e6-4bc4-aa09-f308a3ffca9f",
+    "object_repr": "Zingaro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-04-15T10:41:08.166Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4fd5cfc4-b2ea-4155-8dce-4517a466ff8b",
+    "object_repr": "chicken",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-04-15T10:41:38.785Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "21d8c5ea-2db0-432d-9e5b-0a25cd21bd11",
+    "object_repr": "Banana Milk shake",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-04-15T10:41:59.557Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4979db38-3dc9-45d3-8810-fd0ac60642d6",
+    "object_repr": "Butterscotch",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-04-15T10:42:36.787Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8fac1821-b76e-4e60-afa8-3edc3212066b",
+    "object_repr": "strawberry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-04-15T10:43:17.784Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "e45c229d-205a-4e4e-94a5-e743bdfe881f",
+    "object_repr": "chocolate ice cream",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Product category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-04-15T10:43:39.999Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "d0e342df-6790-4dab-80ff-74344d133fa0",
+    "object_repr": "Agashya",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Shop category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-04-15T13:00:58.751Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1c9cfe3d-9eea-4406-a145-0cd34294c3b2",
+    "object_repr": "Orange juice",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-04-15T13:04:20.688Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "b0173450-b697-460b-8d83-72fa2517c85e",
+    "object_repr": "Coca cola",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-04-15T13:05:53.676Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7c92cac1-b74c-4fb6-a927-a71a04eae3ac",
+    "object_repr": "Banana milk shake",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-04-15T13:35:02.723Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "0524c53e-7448-4d5d-86ad-b9da489cf0e1",
+    "object_repr": "Sambusa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-04-15T13:36:54.622Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "52041951-8976-48bf-94a7-fb22a9988f5f",
+    "object_repr": "Chapati",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-04-15T13:38:46.095Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "0b1e9a67-bc82-4dae-8282-f42c229ef295",
+    "object_repr": "Andazi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-04-15T13:40:46.242Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "adbc6252-f911-4a11-85f0-706de4312dcb",
+    "object_repr": "Burette",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-04-15T13:42:55.796Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6a5438d5-bb02-4f46-a901-4e9cfd25d5aa",
+    "object_repr": "Amata",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4wyfh23jyawuj3dpo3wu7uu7bs63na3q",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u17uO:Sqz89YqxggiCI46hYZq5hX27MRY4KL-QYZd5BQhY_eI",
+    "expire_date": "2025-04-19T18:06:20.448Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8tclqgbanhhfgcehk1bs3gnlz1djvki5",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u2rdX:2-Pw0UGt20COcang9GfM0V7UyeShoW2QVgqoXJU6UzQ",
+    "expire_date": "2025-04-24T13:08:07.469Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "abh92g051op94n539xdwiqne16ols98n",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u17uO:Sqz89YqxggiCI46hYZq5hX27MRY4KL-QYZd5BQhY_eI",
+    "expire_date": "2025-04-19T18:06:20.166Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bok5ywb3jt3jsr93ppnrhkk7iqukho6b",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u17uP:oFiLa3BCrdjKTHywzWDuy5FLvok4E00ANAzSBfarZ9E",
+    "expire_date": "2025-04-19T18:06:21.284Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gs45aeotgbydw69wvx853v2ysn4ltqkf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u14jX:Ar6uqyYyN7U9_9MZ44ENuoexvYzYvxz7Vch7RfqJw5g",
+    "expire_date": "2025-04-19T14:42:55.245Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "syvc18nztnb6qle0t7s1ya6oqso6swtd",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u2rda:BNqR50EZK3eiNVGL-Q0SoqQVaaDFt62oA_UXWpTWNMI",
+    "expire_date": "2025-04-24T13:08:10.265Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y5tbia7cgph2b8gqmh82eyah1lrko68t",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKUyAu3XsGMgODVA0kpV013t026UK3_733NxFwXUpYO89hSuIqBnH53Qjji-sB0hPro8nY6jJPJA9FnrTLe0v8vp3u30HBXvY626jBIwFkowxBgsjGmtGh4kHlZBRpclkr5Tz4ERkykPFkkXg3QHy-4ZY34w:1u14f1:kzaUbw9hTg_Qvc1Z2-VAhhK9u5rqah_shvmUv4FsF4c",
+    "expire_date": "2025-04-19T14:38:15.955Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "2c4a2d34ff9c429d008d7acd7423742365a1a20b",
+  "fields": {
+    "user": 1,
+    "created": "2025-04-05T14:40:20.139Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "99709fed63de9bf12ed965d1414b0a63c6da03f2",
+  "fields": {
+    "user": 2,
+    "created": "2025-04-04T08:26:08.936Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "ae6bd9e4660aa4619a42fe5e3ceb6e5f05e9be76",
+  "fields": {
+    "user": 3,
+    "created": "2025-04-05T09:41:33.344Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "e7d2d9114fd83000c553476d684a93eb34166568",
+  "fields": {
+    "user": 4,
+    "created": "2025-04-15T08:40:13.389Z"
+  }
+},
+{
+  "model": "Auths.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$Ri5vyefZNeCaLf3HS1N872$LbvCcxg0pevqRpogza7/oOnWqH8GsSbzBR64f7PcrTY=",
+    "last_login": "2025-04-10T13:08:10.261Z",
+    "is_superuser": true,
+    "full_name": "Ngoga Innocent Patrick",
+    "alternate_name": null,
+    "birthdate": null,
+    "country": null,
+    "phone_number": "0782214360",
+    "email": "ngogainnocent1@gmail.com",
+    "profile": "media/profile_images/profile_kcocgp",
+    "is_active": true,
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Auths.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$ByKLlmCfwYcEC3oCNZ0GD9$zDbV4RmpXWCXoE2aoslYSRcSBzoJjkly/vNEcv8Dxwo=",
+    "last_login": null,
+    "is_superuser": false,
+    "full_name": "Ngoga",
+    "alternate_name": null,
+    "birthdate": null,
+    "country": null,
+    "phone_number": "0782214366",
+    "email": "bienvenueinnocent2000@gmail.com",
+    "profile": "media/profile_images/profile_z71cna",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Auths.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$UNKMpMwrmuYwgbmrZCuMYh$0sWsl7dQyHwKioSnSw9TTCFdHkmpgtmkvZkCIO61czk=",
+    "last_login": null,
+    "is_superuser": false,
+    "full_name": "GASIGWA Issa",
+    "alternate_name": null,
+    "birthdate": null,
+    "country": null,
+    "phone_number": "0788258922",
+    "email": "gasigwa.issa123@gmail.com",
+    "profile": "media/profile_images/profile_bwnvrl",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Auths.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$IkfrZtaQHIhkrNLjg28B4B$Hel5rpKMkJphe0/62q+BFe0cgZ3RyiNaUygn0zSxxs0=",
+    "last_login": null,
+    "is_superuser": false,
+    "full_name": "Justin",
+    "alternate_name": null,
+    "birthdate": null,
+    "country": null,
+    "phone_number": "0780843635",
+    "email": "hirwajustin2243@gmail.com",
+    "profile": "media/profile_images/profile_gazvas",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "Products.shopcategory",
+  "pk": "3cdf7c87-aa6d-4294-8138-f494f76168d2",
+  "fields": {
+    "title": "Coffee",
+    "thumbnail": "media/Shop_Thumbnail/Coffe_bmur8o",
+    "created_at": "2025-04-15T09:08:12.013Z"
+  }
+},
+{
+  "model": "Products.shopcategory",
+  "pk": "5728170a-5ce9-4651-bb82-87e57dce7ac4",
+  "fields": {
+    "title": "Store",
+    "thumbnail": "media/Shop_Thumbnail/Store_ivdgmn",
+    "created_at": "2025-04-15T09:06:33.490Z"
+  }
+},
+{
+  "model": "Products.shopcategory",
+  "pk": "9b74d144-e40f-42be-8515-e16fd547e09e",
+  "fields": {
+    "title": "Restaurant",
+    "thumbnail": "media/Shop_Thumbnail/Restaurant_ubetoe",
+    "created_at": "2025-04-15T09:06:58.923Z"
+  }
+},
+{
+  "model": "Products.shopcategory",
+  "pk": "9f175121-20a8-43b7-bd7e-674437a52b38",
+  "fields": {
+    "title": "Grill",
+    "thumbnail": "media/Shop_Thumbnail/Grill_dxdunq",
+    "created_at": "2025-04-15T09:07:23.905Z"
+  }
+},
+{
+  "model": "Products.shopcategory",
+  "pk": "b86b7a6a-c993-4869-85b6-667ee5d7c76a",
+  "fields": {
+    "title": "Ice cream",
+    "thumbnail": "media/Shop_Thumbnail/Ice_cream_vhkaog",
+    "created_at": "2025-04-15T09:07:49.990Z"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "14cbd7cc-c01f-43c1-9a62-e6aec047eff5",
+  "fields": {
+    "name": "Food Menu"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "3a76a95d-88a5-4412-bc49-41ef5c216e64",
+  "fields": {
+    "name": "Coffee"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4",
+  "fields": {
+    "name": "Store"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "726ee4eb-95d9-42c5-84a1-a41367eda148",
+  "fields": {
+    "name": "Ice Cream"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "83d4d48e-1452-4cf2-b310-c18b815f8dd1",
+  "fields": {
+    "name": "Drinks"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "877369a9-17f7-4bce-9290-28e2cdf8dad9",
+  "fields": {
+    "name": "Snacks"
+  }
+},
+{
+  "model": "Products.productcategory",
+  "pk": "b2fa8732-2858-40bd-94ec-ba543d58daf1",
+  "fields": {
+    "name": "Grill"
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "001a7a57-9028-4e3d-9342-806351242aa1",
+  "fields": {
+    "name": "Agashya",
+    "description": "Agashya Passion juice",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/Diluted-strawberry-juice-500ml-Bottle-RWF-500-scaled-1080x1080_fsyv2m",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-11T09:33:51.957Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "0086dd91-552e-48d3-9e90-b5d579384ea6",
+  "fields": {
+    "name": "Beef liver",
+    "description": "Beef liver",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Easy_Grilled_Pork_Skewers___How_To_Make_In_Easiest_Ways_vg9apf",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 15,
+    "created_at": "2025-04-15T09:17:21.561Z",
+    "product_category": [
+      "b2fa8732-2858-40bd-94ec-ba543d58daf1"
+    ],
+    "shop_category": [
+      "9f175121-20a8-43b7-bd7e-674437a52b38"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "0524c53e-7448-4d5d-86ad-b9da489cf0e1",
+  "fields": {
+    "name": "Sambusa",
+    "description": "Sambusa",
+    "price": "300.00",
+    "thumbnail": "media/Image_Thumbnail/Sambusa_qbnyh7",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T13:35:02.703Z",
+    "product_category": [
+      "877369a9-17f7-4bce-9290-28e2cdf8dad9"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "0524e3db-dd85-41c7-8204-dc17ddb86bd9",
+  "fields": {
+    "name": "HOT KETCHUP",
+    "description": "HOT KETCHUP 400gr",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/HOT_KETCHUP_400gr-removebg-preview_r8vkke",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-11T09:30:41.677Z",
+    "product_category": [],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "067785ba-fdf9-4dbc-bbe2-f14049fd8c98",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo wheat flour 1 Kg",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo_wheat_flour_1Kg-removebg-preview_hxdpkb",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:31:16.488Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "099d9adc-f2b8-4470-9f36-10b739e9b2e9",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo millet flour 1 kg",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo_millet_flour_1kg-removebg-preview_mp4trq",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:28:19.584Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "0b1e9a67-bc82-4dae-8282-f42c229ef295",
+  "fields": {
+    "name": "Andazi",
+    "description": "Andazi",
+    "price": "300.00",
+    "thumbnail": "media/Image_Thumbnail/Donut_c1ffax",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T13:38:46.081Z",
+    "product_category": [
+      "877369a9-17f7-4bce-9290-28e2cdf8dad9"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "13ce5137-60e6-4bc4-aa09-f308a3ffca9f",
+  "fields": {
+    "name": "Zingaro",
+    "description": "Goat colon&stomach",
+    "price": "2500.00",
+    "thumbnail": "media/Image_Thumbnail/Brochette_b3ytsn",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 12,
+    "created_at": "2025-04-15T09:15:06.512Z",
+    "product_category": [
+      "b2fa8732-2858-40bd-94ec-ba543d58daf1"
+    ],
+    "shop_category": [
+      "9f175121-20a8-43b7-bd7e-674437a52b38"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "1694ab4e-04e3-4d07-a9cc-8e6aa559d661",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo soja flour 1 Kg",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo-soja-flour-1kg-PIECE-RWF-1200-scaled__1_-removebg-preview_mog3qh",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:32:26.110Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "1986e48e-f8c5-4f79-8290-848d338a262e",
+  "fields": {
+    "name": "Urwibutso",
+    "description": "Urwibutso Donut",
+    "price": "500.00",
+    "thumbnail": "media/Image_Thumbnail/donut_urwibutso-removebg-preview_uaxmj9",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-11T09:29:47.410Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "1c9cfe3d-9eea-4406-a145-0cd34294c3b2",
+  "fields": {
+    "name": "Orange juice",
+    "description": "Orange juice",
+    "price": "1000.00",
+    "thumbnail": "",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T13:00:58.738Z",
+    "product_category": [
+      "83d4d48e-1452-4cf2-b310-c18b815f8dd1",
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "21d8c5ea-2db0-432d-9e5b-0a25cd21bd11",
+  "fields": {
+    "name": "Banana Milk shake",
+    "description": "Banana Milk shake",
+    "price": "1000.00",
+    "thumbnail": "media/Image_Thumbnail/Banana_Split_Milkshake__koxayp",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:13:01.832Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [
+      "b86b7a6a-c993-4869-85b6-667ee5d7c76a"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "2303e55c-bfd1-45c7-9c58-a7efdfdc4534",
+  "fields": {
+    "name": "strawberry",
+    "description": "Agashya strawberry",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Dil_strawberry-juice-500ml_ykrs3e",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:55:17.532Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "2498af7f-58bc-4038-bc1f-f52b0695398e",
+  "fields": {
+    "name": "chocolate",
+    "description": "chocolate vanilla",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/Chocolate_Ice-cream__kmcqht",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:19:29.157Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "2ce94301-08bc-41b3-8f0e-eafddc8094c5",
+  "fields": {
+    "name": "Rice",
+    "description": "Plain rice and meat",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/IMG_3947_rzqv6i",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T09:23:02.343Z",
+    "product_category": [
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "2eae85a4-d79d-440a-9bf3-1962cb84aa22",
+  "fields": {
+    "name": "latin",
+    "description": "cafe latin; milk and coffee",
+    "price": "2500.00",
+    "thumbnail": "",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 2,
+    "created_at": "2025-04-15T09:29:03.692Z",
+    "product_category": [
+      "3a76a95d-88a5-4412-bc49-41ef5c216e64"
+    ],
+    "shop_category": [
+      "3cdf7c87-aa6d-4294-8138-f494f76168d2"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "32b4a7e9-def0-4474-8afc-f65e0d8993b9",
+  "fields": {
+    "name": "Banana Milk shake",
+    "description": "Banana milkshake",
+    "price": "100.00",
+    "thumbnail": "media/Image_Thumbnail/Banana_Split_Milkshake__f88dey",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:24:30.129Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "398db8ab-b57c-45d9-940b-bdf3f4699847",
+  "fields": {
+    "name": "Ugali",
+    "description": "Ugali and meat",
+    "price": "2000.00",
+    "thumbnail": "media/Image_Thumbnail/Ugali_ulp2lc",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T09:20:54.416Z",
+    "product_category": [
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "3a7cbef6-6323-4c93-80a0-d3d73427296e",
+  "fields": {
+    "name": "Akawe",
+    "description": "Akawe yoghurt",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Akawe-AMATA-1l-Bottle-RWF-700-5-scaled-removebg-preview_qslmrh",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T13:40:21.567Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "40ccf101-e964-4930-9538-84f4fa486390",
+  "fields": {
+    "name": "Akarabo",
+    "description": "Akarabo Biscuit",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/Akarabo_biscuit_350g-removebg-preview_z8sqap",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:33:41.088Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "42326c2b-5688-44ae-b358-b96bef61db5a",
+  "fields": {
+    "name": "Akabanga",
+    "description": "Akabanga Olive oil",
+    "price": "300.00",
+    "thumbnail": "",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:11:49.856Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "45f67cc8-d339-495f-84f0-bafb4be84976",
+  "fields": {
+    "name": "Pain coupe",
+    "description": "Pain Coupe",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/Pain_coupe-removebg-preview_ha3ejr",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-11T09:32:05.937Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "47a36b6c-c9a3-4941-9713-f97ddddf288e",
+  "fields": {
+    "name": "Chips",
+    "description": "Chips and salad",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Fries_ztfn6j",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T09:24:31.708Z",
+    "product_category": [
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "4979db38-3dc9-45d3-8810-fd0ac60642d6",
+  "fields": {
+    "name": "Butterscotch",
+    "description": "butter solution and sugar milk",
+    "price": "700.00",
+    "thumbnail": "",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:12:16.355Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [
+      "b86b7a6a-c993-4869-85b6-667ee5d7c76a"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "4fd5cfc4-b2ea-4155-8dce-4517a466ff8b",
+  "fields": {
+    "name": "chicken",
+    "description": "Chicken brochette",
+    "price": "2000.00",
+    "thumbnail": "media/Image_Thumbnail/Chicken_Stake_wwqgte",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 15,
+    "created_at": "2025-04-15T09:14:00.030Z",
+    "product_category": [
+      "b2fa8732-2858-40bd-94ec-ba543d58daf1"
+    ],
+    "shop_category": [
+      "9f175121-20a8-43b7-bd7e-674437a52b38"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "52041951-8976-48bf-94a7-fb22a9988f5f",
+  "fields": {
+    "name": "Chapati",
+    "description": "Chapati",
+    "price": "300.00",
+    "thumbnail": "media/Image_Thumbnail/chapati_ralhi3",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T13:36:54.599Z",
+    "product_category": [
+      "877369a9-17f7-4bce-9290-28e2cdf8dad9"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4",
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "55794673-7693-4d7b-98f5-7d0fa04b3657",
+  "fields": {
+    "name": "coffee mocha",
+    "description": "Coffee mocha with minimal sugar",
+    "price": "1500.00",
+    "thumbnail": "",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 5,
+    "created_at": "2025-04-06T15:16:18.977Z",
+    "product_category": [
+      "3a76a95d-88a5-4412-bc49-41ef5c216e64"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "5a66aa05-7008-49ce-b893-56bf002c99e4",
+  "fields": {
+    "name": "pain coupe",
+    "description": "Pain coupe",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Pain_coupe-removebg-preview_bzv9uo",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T10:02:08.706Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "600ac377-504f-4f66-b08f-9a609f6d01cf",
+  "fields": {
+    "name": "Akawe",
+    "description": "Akawe milk",
+    "price": "3000.00",
+    "thumbnail": "media/Image_Thumbnail/Akawe-AMATA-1l-Bottle-RWF-700-4-scaled-removebg-preview_vjzezn",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:52:44.604Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "60cf22f2-bad8-491f-957b-c4d593a5f8e2",
+  "fields": {
+    "name": "vanilla",
+    "description": "Vanilla ice cream",
+    "price": "1000.00",
+    "thumbnail": "",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:18:20.156Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "643ff593-f54e-41c2-8238-972382d4188a",
+  "fields": {
+    "name": "Beef",
+    "description": "beef stake",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Griiled_beef_wa9gch",
+    "is_pick_and_go": false,
+    "delivery_time": 2,
+    "preparation_time": 15,
+    "created_at": "2025-04-15T09:18:29.789Z",
+    "product_category": [
+      "b2fa8732-2858-40bd-94ec-ba543d58daf1"
+    ],
+    "shop_category": [
+      "9f175121-20a8-43b7-bd7e-674437a52b38"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "6592d4ce-9fa2-4917-9a5f-d3177206a4c2",
+  "fields": {
+    "name": "Akarabo",
+    "description": "Akarabo biscuit",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akarabo_biscuit_350g-removebg-preview_mhpqcb",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:46:16.625Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "66ceee98-1854-4ae6-bb53-9adb8841fa5d",
+  "fields": {
+    "name": "Ketch up",
+    "description": "Ketchup",
+    "price": "1000.00",
+    "thumbnail": "media/Image_Thumbnail/HOT_KETCHUP_400gr-removebg-preview_cxgidb",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:59:13.416Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "6a5438d5-bb02-4f46-a901-4e9cfd25d5aa",
+  "fields": {
+    "name": "Amata",
+    "description": "amata",
+    "price": "500.00",
+    "thumbnail": "media/Image_Thumbnail/Milk_wfqzfd",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T13:42:55.779Z",
+    "product_category": [
+      "83d4d48e-1452-4cf2-b310-c18b815f8dd1",
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "780b09db-0ae7-4fb8-8d05-8ccf42fd8a22",
+  "fields": {
+    "name": "Urwibutso",
+    "description": "Urwibutso donut",
+    "price": "500.00",
+    "thumbnail": "media/Image_Thumbnail/donut_urwibutso-removebg-preview_txowj1",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:56:34.403Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "780cb1f9-1717-4ce2-98f1-834339977d1b",
+  "fields": {
+    "name": "Butterscotch",
+    "description": "butterscotch",
+    "price": "1000.00",
+    "thumbnail": "media/Image_Thumbnail/04747a85-1411-4a68-894a-cb7efe378e6d_vsjzsm",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:21:36.639Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "7c92cac1-b74c-4fb6-a927-a71a04eae3ac",
+  "fields": {
+    "name": "Banana milk shake",
+    "description": "Banana milk shake",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/IMG_3996_n7fwic",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T13:05:53.654Z",
+    "product_category": [
+      "83d4d48e-1452-4cf2-b310-c18b815f8dd1"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "8072b759-d249-41a4-87ad-a7b66e67bde5",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo millet flour 1 kg",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo_millet_flour_1kg-removebg-preview_g3twms",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:28:21.847Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "8c64befb-1b0c-42de-bc48-37407bd29f59",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo composite flour 1 Kg",
+    "price": "1500.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo_composite_flour_1KG-removebg-preview_he5pf7",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:27:23.118Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "8fac1821-b76e-4e60-afa8-3edc3212066b",
+  "fields": {
+    "name": "strawberry",
+    "description": "Strawberry ice cream",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/2b67c3cb-2d61-478d-99d5-e0d8218af9d1_aom0t3",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:11:20.089Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [
+      "b86b7a6a-c993-4869-85b6-667ee5d7c76a"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "99e982ab-bd9a-49a1-8917-81d2f82dc6f5",
+  "fields": {
+    "name": "Akaryoshye",
+    "description": "Akaryoshye strawberry",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Akaryoshye_strawberry_yoghurt-removebg-preview_1_qv4h8p",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T13:35:58.386Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "a5b11446-9998-419b-833c-55078a47dfb5",
+  "fields": {
+    "name": "Agashya",
+    "description": "Agashya pineapple squash",
+    "price": "600.00",
+    "thumbnail": "media/Image_Thumbnail/Agashya_pineapple_squash-removebg-preview_inm83q",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:09:24.956Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "a863fa2d-605b-49e5-b85f-225dfc7c6ef4",
+  "fields": {
+    "name": "Pilao",
+    "description": "Pilao rice and meat",
+    "price": "2000.00",
+    "thumbnail": "media/Image_Thumbnail/Pilao_yqtfx9",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T09:26:44.037Z",
+    "product_category": [
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "ac1b4924-64e0-4942-a541-ccff8095221a",
+  "fields": {
+    "name": "Akabanga",
+    "description": "Akabanga chili olive oil 100 ml",
+    "price": "400.00",
+    "thumbnail": "media/Image_Thumbnail/Akabanga-chili-olive-oil-100ml-PIECE-RWF-4000-2-removebg-preview_dzj1rd",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:12:54.430Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "adbc6252-f911-4a11-85f0-706de4312dcb",
+  "fields": {
+    "name": "Burette",
+    "description": "meatball",
+    "price": "300.00",
+    "thumbnail": "media/Image_Thumbnail/IMG_4736_m048p5",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T13:40:46.227Z",
+    "product_category": [
+      "877369a9-17f7-4bce-9290-28e2cdf8dad9"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "aefe12fd-d2af-46f2-bc28-acf27c42c99c",
+  "fields": {
+    "name": "Akaryoshye",
+    "description": "Akaryoshye",
+    "price": "800.00",
+    "thumbnail": "media/Image_Thumbnail/Akaryoshye_strawberry_yoghurt_g1idcd",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:51:12.042Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "b0024572-b7fb-4065-80b1-7c43145d4b99",
+  "fields": {
+    "name": "Akabanga",
+    "description": "Akabanga",
+    "price": "400.00",
+    "thumbnail": "media/Image_Thumbnail/Akabanga_Olive_oil_20_ml-removebg-preview_doz9ux",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:40:54.140Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "b0173450-b697-460b-8d83-72fa2517c85e",
+  "fields": {
+    "name": "Coca cola",
+    "description": "Coca cola",
+    "price": "1000.00",
+    "thumbnail": "",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 5,
+    "created_at": "2025-04-15T13:04:20.669Z",
+    "product_category": [
+      "83d4d48e-1452-4cf2-b310-c18b815f8dd1"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "b50221d9-978c-49ba-b1aa-115c2c020505",
+  "fields": {
+    "name": "Akawe",
+    "description": "Akawe milk 5l",
+    "price": "3500.00",
+    "thumbnail": "media/Image_Thumbnail/Akawe-AMATA-5l-Bottle-RWF-2500-2-scaled-removebg-preview_zervqg",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T13:41:11.889Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "b5b5d763-a8c3-4617-a36c-b0dcb36e4dbc",
+  "fields": {
+    "name": "Americano",
+    "description": "americano coffee",
+    "price": "1000.00",
+    "thumbnail": "media/Image_Thumbnail/americano_coffee_hvsygy",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:34:45.788Z",
+    "product_category": [
+      "3a76a95d-88a5-4412-bc49-41ef5c216e64"
+    ],
+    "shop_category": [
+      "3cdf7c87-aa6d-4294-8138-f494f76168d2"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "b67b7de4-bb56-4bf1-8a0b-c7edb17d9160",
+  "fields": {
+    "name": "Akanozo",
+    "description": "Akanozo",
+    "price": "1200.00",
+    "thumbnail": "media/Image_Thumbnail/Akanozo_composite_flour_1KG-removebg-preview_zp9eno",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:44:34.537Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "c3ef80ef-a6ce-429d-8d66-5e32c5264e99",
+  "fields": {
+    "name": "Akarusho",
+    "description": "Akarusho grape",
+    "price": "13000.00",
+    "thumbnail": "media/Image_Thumbnail/Akarusho-grape-red-dry-wine_f2hsjz",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:48:41.099Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "c505826e-63dd-43cd-bacf-51522689a3f6",
+  "fields": {
+    "name": "Espresso",
+    "description": "Espresso coffee",
+    "price": "2000.00",
+    "thumbnail": "",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:39:01.288Z",
+    "product_category": [
+      "3a76a95d-88a5-4412-bc49-41ef5c216e64"
+    ],
+    "shop_category": [
+      "3cdf7c87-aa6d-4294-8138-f494f76168d2"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "d0e342df-6790-4dab-80ff-74344d133fa0",
+  "fields": {
+    "name": "Agashya",
+    "description": "Agashya Diluted juice",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Dil_strawberry-juice-500ml_uejjaz",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-11T09:45:22.978Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "d3354b62-5a6d-4d74-ab6b-3cfdf9ed9e23",
+  "fields": {
+    "name": "Akandi",
+    "description": "Akandi mineral water",
+    "price": "500.00",
+    "thumbnail": "media/Image_Thumbnail/Akandi-natural-mineral-bg_ds6mmd",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:43:22.570Z",
+    "product_category": [],
+    "shop_category": [
+      "3cdf7c87-aa6d-4294-8138-f494f76168d2"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "d4889173-5ad2-4dee-9d2f-fa6ce2fa5a31",
+  "fields": {
+    "name": "Akawe",
+    "description": "Akawe MIlk",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Akawe-AMATA-1l-Bottle-RWF-700-3-scaled-removebg-preview_fr9zp8",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T13:39:18.362Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "e054c723-f508-4ccd-9c6b-779457bc0658",
+  "fields": {
+    "name": "Potato",
+    "description": "potato dish",
+    "price": "800.00",
+    "thumbnail": "media/Image_Thumbnail/Fried_irish_potato_yvyoox",
+    "is_pick_and_go": false,
+    "delivery_time": 1,
+    "preparation_time": 3,
+    "created_at": "2025-04-15T09:25:27.520Z",
+    "product_category": [
+      "14cbd7cc-c01f-43c1-9a62-e6aec047eff5"
+    ],
+    "shop_category": [
+      "9b74d144-e40f-42be-8515-e16fd547e09e"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "e123aab9-4983-4a6a-90f8-6fb444ff557e",
+  "fields": {
+    "name": "strawberry",
+    "description": "strawberry ice cream",
+    "price": "1000.00",
+    "thumbnail": "media/Image_Thumbnail/2b67c3cb-2d61-478d-99d5-e0d8218af9d1_zx4ixz",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:20:28.635Z",
+    "product_category": [],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "e1ec1ad5-69a7-4de7-a88b-0bda5dc08932",
+  "fields": {
+    "name": "Agashya",
+    "description": "Agashya Passion fruit",
+    "price": "600.00",
+    "thumbnail": "media/Image_Thumbnail/Agashya_passion_fruit-removebg-preview_fiaezh",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-10T12:07:33.284Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "e45c229d-205a-4e4e-94a5-e743bdfe881f",
+  "fields": {
+    "name": "chocolate ice cream",
+    "description": "milk chocolate and statch flavors",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Chocolate_Ice-cream__zy6pgk",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:10:30.470Z",
+    "product_category": [
+      "726ee4eb-95d9-42c5-84a1-a41367eda148"
+    ],
+    "shop_category": [
+      "b86b7a6a-c993-4869-85b6-667ee5d7c76a"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "eef9f6ec-75b0-4085-9ca5-712a071a6631",
+  "fields": {
+    "name": "Agashya",
+    "description": "agashya",
+    "price": "700.00",
+    "thumbnail": "media/Image_Thumbnail/Agashya_passion_fruit-removebg-preview_hmzxba",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:40:25.032Z",
+    "product_category": [
+      "434d2c0a-a507-40ab-a49e-e5fe5aa79cb4"
+    ],
+    "shop_category": [
+      "5728170a-5ce9-4651-bb82-87e57dce7ac4"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.product",
+  "pk": "f09d4a2f-5268-4ba3-a457-0d4a498f5d47",
+  "fields": {
+    "name": "cappucino",
+    "description": "cappucino coffee",
+    "price": "2000.00",
+    "thumbnail": "media/Image_Thumbnail/Cappucino_fz3ncc",
+    "is_pick_and_go": true,
+    "delivery_time": null,
+    "preparation_time": 0,
+    "created_at": "2025-04-15T09:38:11.556Z",
+    "product_category": [
+      "3a76a95d-88a5-4412-bc49-41ef5c216e64"
+    ],
+    "shop_category": [
+      "3cdf7c87-aa6d-4294-8138-f494f76168d2"
+    ],
+    "possible_accompaniments": []
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "10d24cc2-8a9c-4839-9d9e-06695e5625b1",
+  "fields": {
+    "name": "Spices and Appetizers"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+  "fields": {
+    "name": "Main Meal"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "72c4a0c4-5179-42aa-8071-692c640dac03",
+  "fields": {
+    "name": "Drinks"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+  "fields": {
+    "name": "Veggies"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+  "fields": {
+    "name": "Meat"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+  "fields": {
+    "name": "Sauce"
+  }
+},
+{
+  "model": "Products.foodcategory",
+  "pk": "db72361f-8ed2-4c8e-a8da-f19dfe83e68e",
+  "fields": {
+    "name": "Salad"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "02dce450-5385-41d9-a176-ec264cc18d3c",
+  "fields": {
+    "name": "Fish Sauce",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/Fish_soup_nphs2x",
+    "category": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:58:21.380Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "08249dc6-f5c6-4828-9515-0a668508a916",
+  "fields": {
+    "name": "Beans",
+    "price": "300.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_4016_otrygu",
+    "category": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:09:02.479Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "0d1898fc-bbf1-4652-bc82-41a947a70dbf",
+  "fields": {
+    "name": "Sweet Potato",
+    "price": "500.00",
+    "thumbnail": "media/Food_Thumbnail/Sweet_potato_s1x5yn",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:02:55.633Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "0eec3314-9ec8-460e-833a-8c6c3d242f44",
+  "fields": {
+    "name": "Spinach",
+    "price": "300.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_4014_uzljss",
+    "category": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:08:06.619Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "1048b20b-9f78-4bd2-b50f-b854329da70e",
+  "fields": {
+    "name": "Pilao",
+    "price": "2000.00",
+    "thumbnail": "media/Food_Thumbnail/Pilao_faqxze",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:44:25.831Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "273e4846-480d-4d09-8f52-0e28fc8535ac",
+  "fields": {
+    "name": "Beef",
+    "price": "500.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3953_kisuwf",
+    "category": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:49:07.342Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "31bd99e7-34d5-4e50-9d7d-8a454c775ec1",
+  "fields": {
+    "name": "smoothie",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3995_ym5dkq",
+    "category": "72c4a0c4-5179-42aa-8071-692c640dac03",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:39:20.426Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "63c59046-cd06-4158-a7ea-0559ef4129af",
+  "fields": {
+    "name": "Rice",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/Rice_ebszy8",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:45:10.665Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "6a62f951-8e41-454a-8d84-c3c44abb0ac2",
+  "fields": {
+    "name": "Milkshake",
+    "price": "2000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3994_yujquj",
+    "category": "72c4a0c4-5179-42aa-8071-692c640dac03",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:38:49.598Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "74493648-79d1-4d76-ae00-77f2f622a889",
+  "fields": {
+    "name": "Spaghetti",
+    "price": "500.00",
+    "thumbnail": "media/Food_Thumbnail/Spaghetti_r82rsc",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:46:59.447Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "74a11e22-cb07-4ef1-a133-bb0d28d248f5",
+  "fields": {
+    "name": "Potato",
+    "price": "500.00",
+    "thumbnail": "media/Food_Thumbnail/Irish_potato_domc4n",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:02:21.924Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "7f5ef989-fdca-42db-a628-2cdc50a5aa24",
+  "fields": {
+    "name": "Chicken tomato",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3956_lgm12k",
+    "category": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:01:12.215Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "816387fa-3815-4603-9d40-b34f689cd9a3",
+  "fields": {
+    "name": "matoke",
+    "price": "700.00",
+    "thumbnail": "media/Food_Thumbnail/matoke_xqfdkq",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:46:01.277Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "81f1c424-3658-4d35-a7cc-7194221ae1dd",
+  "fields": {
+    "name": "Chicken",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3955_copfsg",
+    "category": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:51:11.571Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "8390427c-fb97-48b0-bf06-71e574f0c412",
+  "fields": {
+    "name": "Fries",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/Fries_sc8ymz",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:42:34.224Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "8e6822a2-deeb-4fc6-830d-84fb4f9f41f2",
+  "fields": {
+    "name": "Goat",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3740_fxflez",
+    "category": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:59:27.908Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "94f6b02d-c42f-4d23-9c92-da12c57ff09b",
+  "fields": {
+    "name": "Chili",
+    "price": "200.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3986_pvjc9z",
+    "category": "10d24cc2-8a9c-4839-9d9e-06695e5625b1",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:06:03.024Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "95f8176b-f020-426f-9311-62f51678adcd",
+  "fields": {
+    "name": "Chicken Salad",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3970_v7tr3c",
+    "category": "db72361f-8ed2-4c8e-a8da-f19dfe83e68e",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:53:59.078Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "9625df77-0ca7-4cdc-aadb-8ad3572039f5",
+  "fields": {
+    "name": "Chicken Salad cucumber",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3971_s059d2",
+    "category": "db72361f-8ed2-4c8e-a8da-f19dfe83e68e",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:54:28.991Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "981c6a42-ae8d-4adf-a0d6-0b3e38fcc05c",
+  "fields": {
+    "name": "Pork",
+    "price": "2000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3959_syubne",
+    "category": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:51:49.962Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "adc0ee25-788c-431d-ba4b-af1a96bc108c",
+  "fields": {
+    "name": "Ketch up",
+    "price": "200.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3985_zm0dy1",
+    "category": "10d24cc2-8a9c-4839-9d9e-06695e5625b1",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:05:33.725Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "aef10152-df1e-4a0c-906f-c4ba79bab42d",
+  "fields": {
+    "name": "Goat",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3958_c9wjio",
+    "category": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:49:56.514Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b049d002-e35e-4e69-8f3e-b2c35576b4ff",
+  "fields": {
+    "name": "Boilo",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/Boilo_iyycyb",
+    "category": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:57:02.984Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b1d2c533-c747-4a98-8a26-5355badc1f18",
+  "fields": {
+    "name": "Soda",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_4008_gtl2g0",
+    "category": "72c4a0c4-5179-42aa-8071-692c640dac03",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:38:08.306Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b450d02f-2789-4bda-b6cb-c60028761717",
+  "fields": {
+    "name": "Cassava leaves",
+    "price": "300.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_4015_uuqasx",
+    "category": "8fb8b648-4058-4b17-a566-1f1a7c659d96",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:08:31.726Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b4b83da1-799b-4b40-b63a-aac10239c106",
+  "fields": {
+    "name": "Plain Salad",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3969_gb2iqt",
+    "category": "db72361f-8ed2-4c8e-a8da-f19dfe83e68e",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:54:59.186Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b51ea73e-e0f0-41fd-9655-e74bc906d984",
+  "fields": {
+    "name": "Mayonnaise",
+    "price": "300.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3983_yvavws",
+    "category": "10d24cc2-8a9c-4839-9d9e-06695e5625b1",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T15:04:52.513Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "b55917f3-b470-47c3-971b-499eea91a886",
+  "fields": {
+    "name": "Mushroom Soup",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/Mushroom_Soap_selqvm",
+    "category": "d0440b7b-6608-4af4-8bb2-0bb962ade897",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:56:23.692Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "c1bc1ced-26a4-4604-bba0-1d67cea02136",
+  "fields": {
+    "name": "Juice",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3998_luouaj",
+    "category": "72c4a0c4-5179-42aa-8071-692c640dac03",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:39:59.893Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "e46ffb8e-8b14-440a-b3f9-440500605a90",
+  "fields": {
+    "name": "Cassava",
+    "price": "500.00",
+    "thumbnail": "media/Food_Thumbnail/Cassava_rdnakd",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:41:27.547Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "eadd926f-ecd3-4bc7-b9b2-3a47223de4a1",
+  "fields": {
+    "name": "Millet",
+    "price": "1000.00",
+    "thumbnail": "media/Food_Thumbnail/Millet_mbykam",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:43:39.305Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "fb632619-3997-4cb4-a9b7-a303438097e1",
+  "fields": {
+    "name": "Ugali",
+    "price": "1500.00",
+    "thumbnail": "media/Food_Thumbnail/Ugali_oxxm2c",
+    "category": "31bebdb0-3d41-46db-bd87-3018f70d20b3",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:47:54.975Z"
+  }
+},
+{
+  "model": "Products.food",
+  "pk": "fb99fe2e-04de-4f81-b49f-813fb0605fa2",
+  "fields": {
+    "name": "Fish",
+    "price": "2000.00",
+    "thumbnail": "media/Food_Thumbnail/IMG_3964_dzy0th",
+    "category": "ac0687aa-422f-4ed9-9c19-aaea337dfac6",
+    "preparation_time": 0,
+    "created_at": "2025-04-06T14:52:29.830Z"
+  }
+},
+{
+  "model": "Products.order",
+  "pk": "48932955-efa4-4d9f-b31b-17587cbdfe79",
+  "fields": {
+    "user": 1,
+    "total_price": "1500.00",
+    "order_payment": "55eca8cc-ccdd-4334-9a4e-1dd01095b306",
+    "payment_status": "failed",
+    "preparation_time": 0,
+    "created_at": "2025-04-10T07:09:46.333Z",
+    "products": [],
+    "foods": [
+      "95f8176b-f020-426f-9311-62f51678adcd"
+    ],
+    "accompaniments": []
+  }
+},
+{
+  "model": "Products.order",
+  "pk": "a5d49fa8-f8bd-4a2e-840d-c454ab98522f",
+  "fields": {
+    "user": 1,
+    "total_price": "100.00",
+    "order_payment": "15a43272-2745-479d-980c-bb7d4822a6b8",
+    "payment_status": "completed",
+    "preparation_time": 0,
+    "created_at": "2025-04-07T09:09:43.349Z",
+    "products": [
+      "32b4a7e9-def0-4474-8afc-f65e0d8993b9"
+    ],
+    "foods": [],
+    "accompaniments": []
+  }
+},
+{
+  "model": "Products.order",
+  "pk": "ae6efbe9-96b7-4681-87da-628b3b0ab307",
+  "fields": {
+    "user": 1,
+    "total_price": "1500.00",
+    "order_payment": "0d8e49b0-1e41-4355-8a5b-1e86eee719f8",
+    "payment_status": "failed",
+    "preparation_time": 5,
+    "created_at": "2025-04-10T07:23:02.944Z",
+    "products": [
+      "55794673-7693-4d7b-98f5-7d0fa04b3657"
+    ],
+    "foods": [],
+    "accompaniments": []
+  }
+},
+{
+  "model": "Payments.payment",
+  "pk": "0d8e49b0-1e41-4355-8a5b-1e86eee719f8",
+  "fields": {
+    "ref": "74b43fbc-ec9e-4c6a-9503-97dfc895dd79",
+    "customer": 1,
+    "phone_number": "0782214360",
+    "amount": "1500.00",
+    "status": "failed",
+    "qr_code": "media/qrcodes/74b43fbc-ec9e-4c6a-9503-97dfc895dd79_qrcode_xrxojk",
+    "is_scanned": false,
+    "created_at": "2025-04-10T07:23:04.264Z"
+  }
+},
+{
+  "model": "Payments.payment",
+  "pk": "15a43272-2745-479d-980c-bb7d4822a6b8",
+  "fields": {
+    "ref": "772ff809-039b-432e-a1a3-f99be3cf1eb9",
+    "customer": 1,
+    "phone_number": "0782214360",
+    "amount": "100.00",
+    "status": "completed",
+    "qr_code": "media/qrcodes/772ff809-039b-432e-a1a3-f99be3cf1eb9_qrcode_ky10ys",
+    "is_scanned": false,
+    "created_at": "2025-04-07T09:09:44.675Z"
+  }
+},
+{
+  "model": "Payments.payment",
+  "pk": "55eca8cc-ccdd-4334-9a4e-1dd01095b306",
+  "fields": {
+    "ref": "22f103d4-7e64-4e2c-b96a-545fe26a279e",
+    "customer": 1,
+    "phone_number": "0782214360",
+    "amount": "1500.00",
+    "status": "failed",
+    "qr_code": "media/qrcodes/22f103d4-7e64-4e2c-b96a-545fe26a279e_qrcode_itvhno",
+    "is_scanned": true,
+    "created_at": "2025-04-10T07:09:47.405Z"
+  }
+},
+{
+  "model": "ChatSupport.chatroom",
+  "pk": "6b105528-31a2-430b-9305-8de5b345ca0a",
+  "fields": {
+    "client": 2,
+    "last_message": "8163831d-1e24-4010-80ed-52f3b56de9dc",
+    "updated_at": "2025-04-08T06:38:37.436Z",
+    "created_at": "2025-04-05T14:39:56.463Z"
+  }
+},
+{
+  "model": "ChatSupport.chatroom",
+  "pk": "d8812627-1ff4-4263-a682-7ae67794334c",
+  "fields": {
+    "client": 3,
+    "last_message": "fe67ff4b-af4d-4698-a1a6-09bb3199e48b",
+    "updated_at": "2025-04-10T20:25:05.170Z",
+    "created_at": "2025-04-05T09:46:20.636Z"
+  }
+},
+{
+  "model": "ChatSupport.message",
+  "pk": "262e9925-a232-427a-830a-1dd83c01b92b",
+  "fields": {
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "sender": 1,
+    "receiver": null,
+    "message_type": "text",
+    "message": "Unsucessfull Payment",
+    "file": "",
+    "status": "sent",
+    "created_at": "2025-04-07T07:59:33.762Z",
+    "updated_at": "2025-04-07T07:59:33.762Z"
+  }
+},
+{
+  "model": "ChatSupport.message",
+  "pk": "348f4935-7145-43d0-8826-d17ee4bebe0c",
+  "fields": {
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "sender": 2,
+    "receiver": null,
+    "message_type": "text",
+    "message": "Hey",
+    "file": "",
+    "status": "sent",
+    "created_at": "2025-04-05T14:41:06.921Z",
+    "updated_at": "2025-04-05T14:41:06.921Z"
+  }
+},
+{
+  "model": "ChatSupport.message",
+  "pk": "8163831d-1e24-4010-80ed-52f3b56de9dc",
+  "fields": {
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "sender": 2,
+    "receiver": null,
+    "message_type": "text",
+    "message": "Unsucessfull Payment",
+    "file": "",
+    "status": "sent",
+    "created_at": "2025-04-08T06:38:37.414Z",
+    "updated_at": "2025-04-08T06:38:37.414Z"
+  }
+},
+{
+  "model": "ChatSupport.message",
+  "pk": "bfaad131-3cef-447b-8710-d25927c01453",
+  "fields": {
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "sender": 1,
+    "receiver": null,
+    "message_type": "text",
+    "message": "Order delay",
+    "file": "",
+    "status": "sent",
+    "created_at": "2025-04-07T08:02:14.950Z",
+    "updated_at": "2025-04-07T08:02:14.950Z"
+  }
+},
+{
+  "model": "ChatSupport.message",
+  "pk": "fe67ff4b-af4d-4698-a1a6-09bb3199e48b",
+  "fields": {
+    "chat_room": "d8812627-1ff4-4263-a682-7ae67794334c",
+    "sender": 3,
+    "receiver": null,
+    "message_type": "text",
+    "message": "Hf",
+    "file": "",
+    "status": "sent",
+    "created_at": "2025-04-10T20:25:05.160Z",
+    "updated_at": "2025-04-10T20:25:05.160Z"
+  }
+},
+{
+  "model": "ChatSupport.messagereadstatus",
+  "pk": 1,
+  "fields": {
+    "message": "348f4935-7145-43d0-8826-d17ee4bebe0c",
+    "user": 2,
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "is_read": true,
+    "staff_read": true,
+    "read_at": null
+  }
+},
+{
+  "model": "ChatSupport.messagereadstatus",
+  "pk": 2,
+  "fields": {
+    "message": "262e9925-a232-427a-830a-1dd83c01b92b",
+    "user": 1,
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "is_read": true,
+    "staff_read": true,
+    "read_at": "2025-04-07T07:59:34.309Z"
+  }
+},
+{
+  "model": "ChatSupport.messagereadstatus",
+  "pk": 3,
+  "fields": {
+    "message": "bfaad131-3cef-447b-8710-d25927c01453",
+    "user": 1,
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "is_read": true,
+    "staff_read": true,
+    "read_at": "2025-04-07T08:02:15.408Z"
+  }
+},
+{
+  "model": "ChatSupport.messagereadstatus",
+  "pk": 4,
+  "fields": {
+    "message": "8163831d-1e24-4010-80ed-52f3b56de9dc",
+    "user": 2,
+    "chat_room": "6b105528-31a2-430b-9305-8de5b345ca0a",
+    "is_read": true,
+    "staff_read": true,
+    "read_at": null
+  }
+},
+{
+  "model": "ChatSupport.messagereadstatus",
+  "pk": 5,
+  "fields": {
+    "message": "fe67ff4b-af4d-4698-a1a6-09bb3199e48b",
+    "user": 3,
+    "chat_room": "d8812627-1ff4-4263-a682-7ae67794334c",
+    "is_read": true,
+    "staff_read": true,
+    "read_at": null
+  }
+},
+{
+  "model": "ChatSupport.faqs",
+  "pk": 1,
+  "fields": {
+    "question": "Unsucessfull Payment",
+    "answer": "Wait a little bit",
+    "created_at": "2025-04-05T18:08:14.622Z"
+  }
+},
+{
+  "model": "ChatSupport.faqs",
+  "pk": 2,
+  "fields": {
+    "question": "Order delay",
+    "answer": "Let contact the driver",
+    "created_at": "2025-04-05T18:08:44.956Z"
+  }
+}
+]

@@ -1,7 +1,7 @@
 from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order
 from rest_framework import serializers
 from decimal import Decimal
-
+from Payments.serilaizers import PaymentSerializer
 
 class ShopCategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,10 +32,11 @@ class FoodCategorySerializer(serializers.ModelSerializer):
         model = FoodCategory
         fields = ['id','name','foods']
 class OrderSerializer(serializers.ModelSerializer):
+    order_payment_details=PaymentSerializer(source='order_payment',read_only=True)
     class Meta:
         model = Order
         fields = '__all__'
-        read_only_fields = ['id', 'user', 'total_price', 'created_at']
+        read_only_fields = ['id', 'user', 'total_price', 'created_at','order_payment_details']
 
 
 

@@ -11,6 +11,10 @@ from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
 from django.core.files.storage import default_storage
 from django.db.models import Q
+from django.utils.encoding import force_bytes, force_str
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from django.core.mail import send_mail
 User = get_user_model()
 # Create your views here.
 class UserView(APIView):
@@ -123,3 +127,42 @@ class ProfileView(APIView):
         user.save()
 
         return Response({"message": "Password updated successfully"}, status=status.HTTP_200_OK)    
+class RequestPasswordResetView(APIView):
+    def get(self,request):
+        return render(request,'reset_password.html')
+    def post(self, request):
+        email = request.data.get('email')
+        try:
+            user = User.objects.get(email=email)
+            uid = urlsafe_base64_encode(force_bytes(user.pk))
+            token = PasswordResetTokenGenerator().make_token(user)
+            reset_link = f"https://sina-gerard.onrender.com/auth/reset-password?uid={uid}&token={token}"
+
+            send_mail(
+                subject="Password Reset Request",
+                message=f"Click the link to reset your password: {reset_link}",
+                from_email="no-reply@yourdomain.com",
+                recipient_list=[email],
+            )
+            return Response({'message': 'Password reset email sent'}, status=200)
+        except User.DoesNotExist:
+            return Response({'error': 'User not found'}, status=404)
+class PasswordResetConfirmView(APIView):
+    def post(self, request):
+        uid = request.data.get('uid')
+        token = request.data.get('token')
+        new_password = request.data.get('new_password')
+
+        try:
+            uid = force_str(urlsafe_base64_decode(uid))
+            user = User.objects.get(pk=uid)
+
+            if PasswordResetTokenGenerator().check_token(user, token):
+                user.set_password(new_password)
+                user.save()
+                return Response({'message': 'Password reset successful'}, status=200)
+            else:
+                return Response({'error': 'Invalid or expired token'}, status=400)
+
+        except Exception as e:
+            return Response({'error': 'Something went wrong'}, status=400)
