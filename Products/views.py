@@ -9,6 +9,8 @@ from Auths.models import User
 from Payments.views import PaymentView
 from Payments.models import Payment
 from django.db.models import Max
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 class ProductView(APIView):
     def get(self, request, *args, **kwargs):
         query = request.query_params.get("search", "")
@@ -47,6 +49,10 @@ class ProductCategoryView(APIView):
         categories = ProductCategory.objects.all()
         serializer = ProductCategorySerializer(categories, many=True,context={"request": request})
         return Response({"data": serializer.data}, status=200)
+class ProductListCreateView(generics.ListCreateAPIView):
+    queryset = Product.objects.all().order_by("-created_at")
+    serializer_class = ProductSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly] 
 class ShopCategoryView(APIView):
     def get(self, request, *args, **kwargs):
         categories = ShopCategory.objects.all()

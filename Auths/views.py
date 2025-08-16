@@ -15,11 +15,16 @@ from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
+from rest_framework import status, permissions
+from rest_framework_simplejwt.tokens import RefreshToken
 User = get_user_model()
 # Create your views here.
 class UserView(APIView):
     def get(self, request, *args, **kwargs):
-        pass
+        return Response(
+            {"detail": "GET method not allowed. Use POST to register."},
+            status=status.HTTP_405_METHOD_NOT_ALLOWED
+        )
     def post(self, request, *args, **kwargs):
         return self.Register(request)
     def Register(self, request, *args, **kwargs):
@@ -74,6 +79,23 @@ class LoginView(APIView):
         except Exception as e:
             print(e)
             return Response({"error": "Incorrect Phone number please Try again"}, status=status.HTTP_404_NOT_FOUND)
+
+
+class LogoutView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request):
+        try:
+            refresh_token = request.data.get("refresh")
+            if refresh_token is None:
+                return Response({"error": "Refresh token required"}, status=status.HTTP_400_BAD_REQUEST)
+
+            token = RefreshToken(refresh_token)
+            token.blacklist()  # requires SimpleJWT blacklist app
+            return Response({"message": "Successfully logged out"}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 class ProfileView(APIView):
     permission_classes = [IsAuthenticated]
     def get(self, request):

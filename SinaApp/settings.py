@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "corsheaders",
      'rest_framework',
     'rest_framework.authtoken',
      'rest_framework_simplejwt',
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -100,7 +102,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASES['default']=dj_database_url.parse(os.getenv("DATABASE_URL"))
+# DATABASES['default']=dj_database_url.parse(os.getenv("DATABASE_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -197,3 +199,12 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'housemajorrwanda@gmail.com'         # Replace this
 EMAIL_HOST_PASSWORD = 'qakq kaby hkci ufkb'      # And this
 DEFAULT_FROM_EMAIL = 'housemajorrwanda@gmail.com'         # Replace this
+# Allow specific origins
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # your React dev server
+#     "http://127.0.0.1:5173",
+#     "http://localhost:3000",
+# ]
+
+# Or, during development only, allow all (⚠️ not for production)
+CORS_ALLOW_ALL_ORIGINS = True
