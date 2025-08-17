@@ -42,11 +42,24 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         """Ensure delivery_time is required if not pick & go."""
-        if not attrs.get("is_pick_and_go") and attrs.get("delivery_time") is None:
+        # Use new values if provided, otherwise fall back to existing instance
+        is_pick_and_go = attrs.get(
+            "is_pick_and_go",
+            getattr(self.instance, "is_pick_and_go", None)
+        )
+        delivery_time = attrs.get(
+            "delivery_time",
+            getattr(self.instance, "delivery_time", None)
+        )
+
+        if not is_pick_and_go and delivery_time is None:
             raise serializers.ValidationError(
-                {"delivery_time": "Delivery time is required if the product is not 'Pick & Go'."}
+                {"delivery_time": "Delivery time is required if the product is not 'Pick & Go serializer'."}
             )
+
         return attrs
+
+
 # class ProductSerializer(serializers.ModelSerializer):
 #     possible_accompaniments=AccompanimentSerializer(read_only=True,many=True)
 #     # category=ProductCategorySerializer(read_only=True,many=True)
@@ -75,42 +88,53 @@ class OrderSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'user', 'total_price', 'created_at','order_payment_details']
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    product_category = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=ProductCategory.objects.all()
-    )
-    shop_category = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=ShopCategory.objects.all()
-    )
-    possible_accompaniments = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Accompaniment.objects.all(), required=False
-    )
+# class ProductSerializer(serializers.ModelSerializer):
+#     product_category = serializers.PrimaryKeyRelatedField(
+#         many=True, queryset=ProductCategory.objects.all()
+#     )
+#     shop_category = serializers.PrimaryKeyRelatedField(
+#         many=True, queryset=ShopCategory.objects.all()
+#     )
+#     possible_accompaniments = serializers.PrimaryKeyRelatedField(
+#         many=True, queryset=Accompaniment.objects.all(), required=False
+#     )
 
-    class Meta:
-        model = Product
-        fields = [
-            "id",
-            "name",
-            "description",
-            "price",
-            "product_category",
-            "shop_category",
-            "possible_accompaniments",
-            "thumbnail",
-            "is_pick_and_go",
-            "delivery_time",
-            "preparation_time",
-            "created_at",
-        ]
-        read_only_fields = ["id", "created_at"]
+#     class Meta:
+#         model = Product
+#         fields = [
+#             "id",
+#             "name",
+#             "description",
+#             "price",
+#             "product_category",
+#             "shop_category",
+#             "possible_accompaniments",
+#             "thumbnail",
+#             "is_pick_and_go",
+#             "delivery_time",
+#             "preparation_time",
+#             "created_at",
+#         ]
+#         read_only_fields = ["id", "created_at"]
 
-    def validate(self, attrs):
-        """Ensure delivery_time is required if not pick & go."""
-        if not attrs.get("is_pick_and_go") and attrs.get("delivery_time") is None:
-            raise serializers.ValidationError(
-                {"delivery_time": "Delivery time is required if the product is not 'Pick & Go'."}
-            )
-        return attrs
+#     def validate(self, attrs):
+#         """Ensure delivery_time is required if not pick & go."""
+#         # Use new values if provided, otherwise fall back to existing instance
+#         is_pick_and_go = attrs.get(
+#             "is_pick_and_go",
+#             getattr(self.instance, "is_pick_and_go", None)
+#         )
+#         delivery_time = attrs.get(
+#             "delivery_time",
+#             getattr(self.instance, "delivery_time", None)
+#         )
+
+#         if not is_pick_and_go and delivery_time is None:
+#             raise serializers.ValidationError(
+#                 {"delivery_time": "Delivery time is required if the product is not 'Pick & Go serializer'."}
+#             )
+
+#         return attrs
 
 
 

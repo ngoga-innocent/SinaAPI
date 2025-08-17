@@ -9,7 +9,7 @@ from Auths.models import User
 from Payments.views import PaymentView
 from Payments.models import Payment
 from django.db.models import Max
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAdminUser
 
 class ProductView(APIView):
     def get(self, request, *args, **kwargs):
@@ -53,20 +53,31 @@ class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all().order_by("-created_at")
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticatedOrReadOnly] 
-class ShopCategoryView(APIView):
-    def get(self, request, *args, **kwargs):
-        categories = ShopCategory.objects.all()
-        serializer = ShopCategorySerializer(categories, many=True,context={"request": request})
-        return Response({"data": serializer.data}, status=200)
-class FoodCategoryView(APIView):
-    def get(self, request, *args, **kwargs):
-        try:
-            food_categories = FoodCategory.objects.all()
-            serializer=FoodCategorySerializer(food_categories, many=True, context={"request": request})
-            return Response({"data": serializer.data}, status=200)
-        except Exception as e:
-            print(e)
-            return Response({"error": str(e)}, status=500)
+class ProductReadUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    queryset=Product.objects.all()
+    serializer_class=ProductSerializer
+    permission_classes=[IsAuthenticatedOrReadOnly]
+class ShopCategoryListCreateView(generics.ListCreateAPIView):
+    queryset = ShopCategory.objects.all().order_by("-created_at")
+    serializer_class = ShopCategorySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+class ShopCategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ShopCategory.objects.all()
+    serializer_class = ShopCategorySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+
+# --- FoodCategory CRUD ---
+class FoodCategoryListCreateView(generics.ListCreateAPIView):
+    queryset = FoodCategory.objects.all().order_by("name")
+    serializer_class = FoodCategorySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+class FoodCategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FoodCategory.objects.all()
+    serializer_class = FoodCategorySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 class OrderCreateAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     def get(self,request):
@@ -163,4 +174,7 @@ class OrderDetailView(generics.RetrieveUpdateAPIView):
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
-        
+class ListOrderView(generics.ListAPIView):
+    queryset=Order.objects.all().order_by('-created_at')
+    serializer_class=OrderSerializer
+    permissions_classes=[permissions.IsAdminUser]

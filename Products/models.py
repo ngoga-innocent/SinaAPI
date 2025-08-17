@@ -60,9 +60,21 @@ class Product(models.Model):
         return self.name
 
     def clean(self):
-        """Ensure delivery_time is required only if is_pick_and_go is False."""
-        if not self.is_pick_and_go and self.delivery_time is None:
-            raise ValidationError({'delivery_time': "Delivery time is required if the product is not 'Pick & Go'."})
+        # Only check if delivery_time is None and is_pick_and_go is False
+        # but allow existing value if instance exists
+        if not self.is_pick_and_go:
+            if self.pk:  # updating existing instance
+                existing = Product.objects.get(pk=self.pk)
+                if self.delivery_time is None and existing.delivery_time is None:
+                    raise ValidationError({
+                        'delivery_time': "Delivery time is required if the product model is not 'Pick & Go'."
+                    })
+            else:  # creating new instance
+                if self.delivery_time is None:
+                    raise ValidationError({
+                        'delivery_time': "Delivery time is required if the product model is not 'Pick & Go'."
+                    })
+
 
     class Meta:
         verbose_name_plural = 'Products'
