@@ -16,7 +16,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-4kxfbm)#mq6vx2)ap03jktc7*&!u9*8z5_uj5+n$h!xlgbr31#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Products',
     'Payments',
     'ChatSupport',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication', 
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     # 'DEFAULT_PERMISSION_CLASSES': (
     #     'rest_framework.permissions.IsAuthenticated',
     # ),
@@ -208,3 +210,10 @@ DEFAULT_FROM_EMAIL = 'housemajorrwanda@gmail.com'         # Replace this
 
 # Or, during development only, allow all (⚠️ not for production)
 CORS_ALLOW_ALL_ORIGINS = True
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Sina Gerard API',
+    'DESCRIPTION': 'Sina Gerard Api Full Documentation',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}

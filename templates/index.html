@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sina Gérard - E-Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Logo.png' %}">
+
+  </head>
+  <body class="bg-gradient-to-b from-amber-50 h-screen flex flex-col items-center justify-center via-white to-amber-100 font-sans">
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden ">
+      <!-- Animated background shapes -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-amber-200 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-green-200 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+
+      <div class="relative z-10 container mx-auto px-6 lg:px-20 py-24 grid lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="space-y-6 animate-fadeIn">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+            Sina Gérard <span class="text-amber-600">Products</span>
+          </h1>
+          <p class="text-lg text-gray-600 max-w-lg">
+            Discover premium natural products from Rwanda. Fresh, organic, and made with love for healthier living. 
+          </p>
+          <div class="flex space-x-4">
+            <a href="#shop" class="px-6 py-3 bg-amber-600 text-white font-semibold rounded-xl shadow-lg hover:bg-amber-700 transition-transform transform hover:scale-105">
+              Shop Now
+            </a>
+            <a href="#about" class="px-6 py-3 border border-amber-600 text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="relative">
+          <img 
+            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" 
+            alt="Sina Products" 
+            class="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-700 ease-in-out"
+          />
+          <!-- Floating badge -->
+          <div class="absolute top-6 left-6 bg-white rounded-full shadow-lg px-4 py-2 text-sm font-semibold text-amber-600 animate-bounce">
+            100% Organic
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Animations -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
+    </style>
+  </body>
+</html>

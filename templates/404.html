@@ -1,17 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/Logo.png' %}">
 </head>
-<body class="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800">
-    <h1 class="text-7xl font-bold text-red-500">404</h1>
-    <p class="text-2xl font-semibold mt-4">Oops! Page Not Found</p>
-    <p class="text-lg mt-2 text-gray-600">The page you are looking for might have been removed or is temporarily unavailable.</p>
-    <a href="/admin" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-        Go Back Home
-    </a>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex items-center justify-center h-screen">
+  
+  <div class="text-center px-6">
+    <!-- Animated number -->
+    <h1 class="text-9xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-lime-400 animate-pulse">
+      404
+    </h1>
+
+    <!-- Message -->
+    <p class="mt-4 text-xl md:text-2xl font-medium text-gray-300">
+      Oops! The page you’re looking for doesn’t exist.
+    </p>
+
+    <!-- Divider -->
+    <div class="w-24 h-1 mx-auto mt-6 bg-gradient-to-r from-amber-400 to-lime-400 rounded-full animate-pulse"></div>
+
+    <!-- Button back -->
+    <div class="mt-8">
+      <a href="/" 
+         class="relative inline-block px-6 py-3 font-semibold text-gray-900 group">
+        <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-gradient-to-r from-amber-400 to-lime-400 group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-xl"></span>
+        <span class="absolute inset-0 w-full h-full bg-white rounded-xl"></span>
+        <span class="relative">Go Back Home</span>
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
