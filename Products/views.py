@@ -10,6 +10,9 @@ from Auths.models import User
 from Payments.views import PaymentView
 from Payments.models import Payment
 from django.db.models import Max
+from .filters import ProductFilter
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAdminUser
 
 class ProductView(APIView):
@@ -55,6 +58,10 @@ class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all().order_by("-created_at")
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticatedOrReadOnly] 
+    filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
+    filterset_class = ProductFilter
+    ordering_fields = ["price", "created_at", "preparation_time"]
+    search_fields = ["name", "description"]
     def post(self, request, *args, **kwargs):
         print("Request data:", request.data)
         print("User:", request.user)

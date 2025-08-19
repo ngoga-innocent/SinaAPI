@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User,Notification
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -10,4 +10,7 @@ class RegisterUserSerializer(serializers.ModelSerializer):
         model=User
         fields=['phone_number', 'full_name', 'email', 'password']
         extra_kwargs = {'password': {'write_only': True}}
-                
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields = "__all__"

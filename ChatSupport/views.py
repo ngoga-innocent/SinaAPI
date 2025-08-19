@@ -1,4 +1,4 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status,generics
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
@@ -226,3 +226,76 @@ class SearchFaqs(APIView):
         faqs=FAQs.objects.filter(question__icontains=query)
         serializer=FAQsSerializer(faqs,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
+# Generic Views
+class ChatRoomListCreateView(generics.ListCreateAPIView):
+    """List all chat rooms or create a new one for a customer"""
+    serializer_class = ChatRoomSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return ChatRoom.objects.all().order_by("-updated_at")
+        return ChatRoom.objects.filter(client=user).order_by("-updated_at")
+
+    def perform_create(self, serializer):
+        user = self.request.user
+        if user.is_staff:
+            raise PermissionError("Staff cannot create chat rooms")
+        # Ensure only one room per customer
+        existing_room = ChatRoom.objects.filter(client=user).first()
+        if existing_room:
+            return existing_room
+        serializer.save(client=user)
+
+
+class ChatRoomRetrieveDestroyView(generics.RetrieveDestroyAPIView):
+    """Retrieve or delete a single chat room"""
+    serializer_class = ChatRoomSerializer
+    permission_classes = [IsAuthenticated]
+    queryset = ChatRoom.objects.all()
+
+    def delete(self, request, *args, **kwargs):
+        room = self.get_object()
+        if request.user not in room.participants.all():
+            return Response({"error": "You cannot delete this chat room."}, status=status.HTTP_403_FORBIDDEN)
+        return super().delete(request, *args, **kwargs)
+
+# -------------------------------
+# Message Generic Views
+# -------------------------------
+class MessageListCreateView(generics.ListCreateAPIView):
+    """List messages in a chat room or send a new message"""
+    serializer_class = MessageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        chat_room_id = self.kwargs.get("chat_room_id")
+        chat_room = get_object_or_404(ChatRoom, id=chat_room_id)
+        return Message.objects.filter(chat_room=chat_room).order_by('created_at')
+
+    def perform_create(self, serializer):
+        chat_room_id = self.kwargs.get("chat_room_id")
+        chat_room = get_object_or_404(ChatRoom, id=chat_room_id)
+        message = serializer.save(sender=self.request.user, chat_room=chat_room)
+        # Update last_message and updated_at
+        ChatRoom.objects.filter(id=chat_room_id).update(last_message=message, updated_at=now())
+
+
+class MessageRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """Retrieve, update, or delete a single message"""
+    serializer_class = MessageSerializer
+    permission_classes = [IsAuthenticated]
+    queryset = Message.objects.all()
+
+    def update(self, request, *args, **kwargs):
+        message = self.get_object()
+        if message.sender != request.user:
+            return Response({"error": "You can only edit your own messages."}, status=status.HTTP_403_FORBIDDEN)
+        return super().update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        message = self.get_object()
+        if message.sender != request.user:
+            return Response({"error": "You can only delete your own messages."}, status=status.HTTP_403_FORBIDDEN)
+        return super().destroy(request, *args, **kwargs)

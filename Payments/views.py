@@ -13,13 +13,36 @@ from dotenv import load_dotenv
 import qrcode
 from io import BytesIO
 from django.utils import timezone
+from rest_framework import generics
 from django.core.files.base import ContentFile
 from django.core.files.uploadedfile import SimpleUploadedFile
 from rest_framework.decorators import api_view
 from .serilaizers import PaymentSerializer
+from rest_framework.permissions import IsAuthenticated,IsAdminUser
 import logging
 logger = logging.getLogger(__name__)
 load_dotenv()
+# UPDATING PAYMENT and Retrieving Payment Status
+
+class PaymentListView(generics.ListAPIView):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
+    permission_classes = [IsAdminUser]
+class PaymentRetrieveUpdate(generics.RetrieveUpdateAPIView):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
+    permission_classes = [IsAdminUser]
+
+    def patch(self, request, *args, **kwargs):
+        try:
+            print("Request data:", request.data)
+            return super().patch(request, *args, **kwargs)
+        except Exception as e:
+            print("Error occurred:", e)
+            return Response(
+                {"error": "Failed to update payment"}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 class PaymentView(APIView):
     permission_classes = [IsAuthenticated]  # Require authentication
 

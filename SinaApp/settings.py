@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
      
-    
+     "django_filters",
     'Auths',
     'Products',
     'Payments',

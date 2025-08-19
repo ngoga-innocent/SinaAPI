@@ -18,9 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
     shop_category = serializers.PrimaryKeyRelatedField(
         many=True, queryset=ShopCategory.objects.all()
     )
-    possible_accompaniments = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Accompaniment.objects.all(), required=False
-    )
+    possible_accompaniments = possible_accompaniments = AccompanimentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Product

@@ -41,3 +41,23 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.full_name
+class Notification(models.Model):
+    NOTIFICATION_TYPES = (
+        ("all", "All Users"),
+        ("user", "Single User"),
+    )
+
+    title = models.CharField(max_length=255)
+    message = models.TextField()
+    notification_type = models.CharField(
+        max_length=10, choices=NOTIFICATION_TYPES, default="all"
+    )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True,
+        related_name="notifications"
+    )  # Only set if notification_type == "user"
+    created_at = models.DateTimeField(auto_now_add=True)
+    read = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.title} - {self.notification_type}"

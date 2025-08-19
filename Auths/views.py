@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status,generics
 from rest_framework.views import APIView
 from .serializers import RegisterUserSerializer,UserSerializer
 from django.contrib.auth.password_validation import validate_password
@@ -17,6 +17,9 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from rest_framework import status, permissions
 from django.contrib.auth import logout
+from .models import Notification
+from .serializers import NotificationSerializer
+from django.db import models
 # from rest_framework_simplejwt.tokens import RefreshToken
 User = get_user_model()
 # Create your views here.
@@ -183,3 +186,37 @@ class PasswordResetConfirmView(APIView):
 
         except Exception as e:
             return Response({'error': 'Something went wrong'}, status=400)
+class NotificationListCreateView(generics.ListCreateAPIView):
+    queryset = Notification.objects.all().order_by("-created_at")
+    serializer_class = NotificationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        try:
+            user = self.request.user
+            return Notification.objects.filter(
+                models.Q(notification_type="all") | 
+                models.Q(notification_type="user", user=user)
+            ).order_by("-created_at")
+        except Exception as e:
+            print(f"Error in get_queryset: {str(e)}")  # Add logging
+            return Notification.objects.none()  # Return empty queryset on error
+
+class NotificationDetailView(generics.RetrieveUpdateDestroyAPIView):
+
+    serializer_class = NotificationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Notification.objects.all()
+        return Notification.objects.filter(
+            models.Q(notification_type="user", user=user) |
+            models.Q(notification_type="all")
+        )
+    def perform_update(self, serializer):
+        # Ensure user can only update their own notifications
+        notification = self.get_object()
+        if notification.notification_type == "user" and notification.user != self.request.user:
+            raise PermissionError("You cannot update notifications that don't belong to you")
+        serializer.save()
