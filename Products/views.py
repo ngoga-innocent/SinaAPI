@@ -1,3 +1,4 @@
+from urllib import request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.db.models import Q
@@ -50,9 +51,14 @@ class ProductCategoryView(APIView):
         serializer = ProductCategorySerializer(categories, many=True,context={"request": request})
         return Response({"data": serializer.data}, status=200)
 class ProductListCreateView(generics.ListCreateAPIView):
+    # print(request.data)
     queryset = Product.objects.all().order_by("-created_at")
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticatedOrReadOnly] 
+    def post(self, request, *args, **kwargs):
+        print("Request data:", request.data)
+        print("User:", request.user)
+        return super().create(request, *args, **kwargs)
 class ProductReadUpdateView(generics.RetrieveUpdateDestroyAPIView):
     queryset=Product.objects.all()
     serializer_class=ProductSerializer
@@ -169,10 +175,13 @@ class OrderCreateAPIView(APIView):
 
 
 class OrderDetailView(generics.RetrieveUpdateAPIView):
+    # queryset=Order.objects.all()
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
+        if self.request.user.is_staff:
+            return Order.objects.all()
         return Order.objects.filter(user=self.request.user)
 class ListOrderView(generics.ListAPIView):
     queryset=Order.objects.all().order_by('-created_at')

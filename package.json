@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "metro-react-native-babel-transformer": "^0.77.0"
+  }
+}
