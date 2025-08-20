@@ -254,7 +254,7 @@ class ChatRoomRetrieveDestroyView(generics.RetrieveDestroyAPIView):
     serializer_class = ChatRoomSerializer
     permission_classes = [IsAuthenticated]
     queryset = ChatRoom.objects.all()
-
+    lookup_field = "pk" 
     def delete(self, request, *args, **kwargs):
         room = self.get_object()
         if request.user not in room.participants.all():
