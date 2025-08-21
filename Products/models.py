@@ -47,6 +47,7 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    stock = models.PositiveIntegerField(default=0)
     product_category = models.ManyToManyField('ProductCategory', related_name='products', blank=True)  
     shop_category = models.ManyToManyField('ShopCategory', related_name='products', blank=True)
     possible_accompaniments = models.ManyToManyField('Accompaniment', blank=True, related_name='products')  
@@ -109,17 +110,50 @@ class Order(models.Model):
         ('completed', 'completed'),
         ('failed', 'failed'),
     ]
+    ORDER_STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('paid','Paid'),
+        ('accepted', 'In Progress'),
+        ('ready', 'Completed'),
+        ('delivered', 'Delivered'),
+        ('rejected', 'Rejected'),
+        ('cancelled', 'Cancelled'),
+    ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_orders")
-    products = models.ManyToManyField('Product', blank=True, related_name="product_orders")
+    # products = models.ManyToManyField('Product', blank=True, related_name="product_orders")
+    # products = models.ManyToManyField("Product", through="OrderItem", blank=True)
     foods = models.ManyToManyField('Food', blank=True, related_name="food_orders")
     accompaniments = models.ManyToManyField('Accompaniment', blank=True, related_name="orders")
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     order_payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, null=True)
+    order_status=models.CharField(max_length=10, choices=ORDER_STATUS_CHOICES, default='pending')
     payment_status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='pending')
     preparation_time = models.PositiveIntegerField(default=0)  # In minutes
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Order {self.id} - {self.user.phone_number} - {self.payment_status}"
+class OrderItem(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    order = models.ForeignKey("Order", related_name="items", on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name="order_items", on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+
+    def clean(self):
+        print(f"DEBUG: Validating stock for {self.product.name}, requested {self.quantity}, available {self.product.stock}")
+        if self.product.stock < self.quantity:
+            raise ValidationError(f"Not enough stock for {self.product.name}")
+
+    def save(self, *args, **kwargs):
+        is_new = self._state.adding
+        self.clean()
+        super().save(*args, **kwargs)
+        # Reduce stock only when creating
+        if is_new:
+            self.product.stock -= self.quantity
+            self.product.save(update_fields=["stock"])
+
+    def __str__(self):
+        return f"{self.quantity} x {self.product.name} for order {self.order.id}"

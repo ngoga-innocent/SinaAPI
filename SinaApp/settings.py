@@ -104,7 +104,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db1.sqlite3',
     }
 }
-DATABASES['default']=dj_database_url.parse(os.getenv("DATABASE_URL"))
+# DATABASES['default']=dj_database_url.parse(os.getenv("DATABASE_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -130,11 +130,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
 USE_TZ = True
+TIME_ZONE = 'Africa/Kigali'  
 
 
 # Static files (CSS, JavaScript, Images)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order
+from .models import ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order,OrderItem
 
 @admin.register(ShopCategory)
 class ShopCategoryAdmin(admin.ModelAdmin):
@@ -14,7 +14,7 @@ class ProductCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price','is_pick_and_go','delivery_time', 'created_at')
+    list_display = ('name', 'price','stock','is_pick_and_go','delivery_time', 'created_at')
     list_filter = ('shop_category', 'product_category')  # Add filter sidebar
     search_fields = ('name', 'description')
     ordering = ('-created_at',)
@@ -40,12 +40,16 @@ class FoodAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_filter = ('category',)    
 # admin.site.register(Order)
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    extra = 0  # no extra blank rows
+    readonly_fields = ('product', 'quantity') 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'total_price', 'payment_status', 'created_at')
     search_fields = ('user__phone_number', 'user__id')  
     list_filter = ('payment_status',)  
-
+    inlines = [OrderItemInline]
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
         # print("Admin Panel Orders:", queryset)  # Debugging

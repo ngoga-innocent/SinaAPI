@@ -1,9 +1,10 @@
-from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order
+from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order,OrderItem
 from rest_framework import serializers
 from decimal import Decimal
 from Payments.serilaizers import PaymentSerializer
 
 class ShopCategorySerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = ShopCategory
         fields = '__all__'
@@ -11,6 +12,7 @@ class AccompanimentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Accompaniment
         fields = '__all__'
+
 class ProductSerializer(serializers.ModelSerializer):
     product_category = serializers.PrimaryKeyRelatedField(
         many=True, queryset=ProductCategory.objects.all()
@@ -34,6 +36,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "is_pick_and_go",
             "delivery_time",
             "preparation_time",
+            "stock",
             "created_at",
         ]
         read_only_fields = ["id", "created_at"]
@@ -56,6 +59,8 @@ class ProductSerializer(serializers.ModelSerializer):
             )
 
         return attrs
+    def get_stock(self, obj):
+        return obj.inventory.stock_quantity if hasattr(obj, "inventory") else 0
 
 
 # class ProductSerializer(serializers.ModelSerializer):
@@ -78,12 +83,23 @@ class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
         fields = ['id','name','foods']
+class OrderItemSerializer(serializers.ModelSerializer):
+    product_name = serializers.ReadOnlyField(source="product.name")
+    product_price = serializers.ReadOnlyField(source="product.price")
+
+    class Meta:
+        model = OrderItem
+        fields = ["id", "product", "product_name", "product_price", "quantity"]
 class OrderSerializer(serializers.ModelSerializer):
-    order_payment_details=PaymentSerializer(source='order_payment',read_only=True)
+    order_payment_details = PaymentSerializer(source='order_payment', read_only=True)
+    products = OrderItemSerializer(many=True, read_only=True)  # nested products with quantity
+
     class Meta:
         model = Order
         fields = '__all__'
-        read_only_fields = ['id', 'user', 'total_price', 'created_at','order_payment_details']
+        read_only_fields = [
+            'id', 'user', 'total_price', 'created_at', 'order_payment_details', 'products'
+        ]
 
 
 # class ProductSerializer(serializers.ModelSerializer):
