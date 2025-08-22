@@ -61,3 +61,9 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.notification_type}"
+class DeviceToken(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="device_token")
+    expo_push_token = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.expo_push_token}"

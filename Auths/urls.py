@@ -10,4 +10,5 @@ urlpatterns=[
     path('reset-password-confirm', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
     path('notification', NotificationListCreateView.as_view(), name='notification_list_create'),
     path('notification/<int:pk>/', NotificationDetailView.as_view(), name='notification_detail'),
+    path('save_token/', save_push_token)
 ]

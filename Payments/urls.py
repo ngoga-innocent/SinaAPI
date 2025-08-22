@@ -7,5 +7,6 @@ urlpatterns =[
     
     path('paymentCheck/<uuid:payment_id>',checkPayment),
     path('webhook',WebHook),
-    path('qrscan/',ConfirmQrScan.as_view())
+    path('qrscan/',ConfirmQrScan.as_view()),
+    
 ]

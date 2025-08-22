@@ -17,9 +17,10 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from rest_framework import status, permissions
 from django.contrib.auth import logout
-from .models import Notification
+from .models import Notification,DeviceToken
 from .serializers import NotificationSerializer
 from django.db import models
+from rest_framework.decorators import api_view,permission_classes
 # from rest_framework_simplejwt.tokens import RefreshToken
 User = get_user_model()
 # Create your views here.
@@ -220,3 +221,19 @@ class NotificationDetailView(generics.RetrieveUpdateDestroyAPIView):
         if notification.notification_type == "user" and notification.user != self.request.user:
             raise PermissionError("You cannot update notifications that don't belong to you")
         serializer.save()
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def save_push_token(request):
+    token = request.data.get("expo_push_token")
+
+    if not token:
+        return Response({"error": "Missing token"}, status=status.HTTP_400_BAD_REQUEST)
+
+    # request.user is the authenticated user
+    user = request.user  
+
+    DeviceToken.objects.update_or_create(
+        user=user, defaults={"expo_push_token": token}
+    )
+
+    return Response({"success": True}, status=status.HTTP_200_OK)

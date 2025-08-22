@@ -113,7 +113,7 @@ class PaymentView(APIView):
         
         return Response({"message": "Payment recorded successfully", "payment_id": payment.id, "status": payment.status}, status=status.HTTP_200_OK)
     @staticmethod
-    def generate_QrCode(customer_id, amount, transaction_ref, payment_id, payment_status):
+    def generate_QrCode(customer_id,customer_name,customer_phone, amount, transaction_ref, payment_id, payment_status):
         """Generate a QR code and attach it to the payment record."""
         print("generating QRCODE")
         try:
@@ -129,6 +129,8 @@ class PaymentView(APIView):
             payment_data = {
                 'customer_id': customer_id,
                 'payment_id': str(payment_id),
+                'customer_name': str(customer_name),
+                'customer_phone': str(customer_phone),
                 'amount': str(amount),  # Convert Decimal to string
                 'status': payment_status,
                 'transaction_id': transaction_ref,
@@ -230,9 +232,10 @@ class ConfirmQrScan(APIView):
         try:
             payment=Payment.objects.get(id=payment_id)
             if payment.is_scanned:
-                return Response({"message":"Payment Already Scanned","valid":False},status=200)
+                return Response({"message":"Payment Already Scanned","valid":False,"data":PaymentSerializer(payment).data},status=200)
             payment.is_scanned=True
-            payment.save()
-            return Response({"message":"Qr Code Scanned Correctly","valid":True},status=201)
+            payment_save=payment.save()
+            
+            return Response({"message":"Qr Code Scanned Correctly","valid":True,"data":PaymentSerializer(payment_save).data},status=201)
         except Payment.DoesNotExist:
             return Response({"message":"Invalid Payment","valid":False},status=400)
