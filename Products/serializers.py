@@ -92,7 +92,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = ["id", "product", "product_name", "product_price", "quantity"]
 class OrderSerializer(serializers.ModelSerializer):
     order_payment_details = PaymentSerializer(source='order_payment', read_only=True)
-    products = OrderItemSerializer(many=True, read_only=True)  # nested products with quantity
+    products = OrderItemSerializer(many=True, read_only=True,source='items')  # nested products with quantity
 
     class Meta:
         model = Order
