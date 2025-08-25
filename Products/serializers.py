@@ -2,7 +2,7 @@ from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,Food
 from rest_framework import serializers
 from decimal import Decimal
 from Payments.serilaizers import PaymentSerializer
-
+from Auths.serializers import UserSerializer
 class ShopCategorySerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -92,13 +92,14 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = ["id", "product", "product_name", "product_price", "quantity"]
 class OrderSerializer(serializers.ModelSerializer):
     order_payment_details = PaymentSerializer(source='order_payment', read_only=True)
+    customer=UserSerializer(read_only=True,source='user')
     products = OrderItemSerializer(many=True, read_only=True,source='items')  # nested products with quantity
 
     class Meta:
         model = Order
         fields = '__all__'
         read_only_fields = [
-            'id', 'user', 'total_price', 'created_at', 'order_payment_details', 'products'
+            'id', 'user', 'total_price', 'created_at', 'order_payment_details','customer', 'products'
         ]
 
 
