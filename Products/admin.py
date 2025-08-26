@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order,OrderItem
+from .models import InventoryUpdateHistory, ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order,OrderItem
 
 @admin.register(ShopCategory)
 class ShopCategoryAdmin(admin.ModelAdmin):
@@ -44,6 +44,11 @@ class OrderItemInline(admin.TabularInline):
     model = OrderItem
     extra = 0  # no extra blank rows
     readonly_fields = ('product', 'quantity') 
+@admin.register(InventoryUpdateHistory)
+class InventoryUpdateHistoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'product', 'quantity', 'industry_tracking_number', 'reason', 'changed_at')
+    search_fields = ('product__name', 'industry_tracking_number')
+    list_filter = ('changed_at',)
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'total_price', 'payment_status', 'created_at')

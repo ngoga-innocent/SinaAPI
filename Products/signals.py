@@ -1,10 +1,10 @@
 from django.db.models.signals import post_save,m2m_changed
 from django.dispatch import receiver
-
+from django.db.models.signals import pre_save
 from Auths.push_Notification import send_push_notification
-from .models import Order,Product
+from Products.calculate_distance_time import calculate_distance_and_time
+from .models import Order,Product,InventoryUpdateHistory
 from Auths.models import Notification
-
 @receiver(post_save, sender=Order)
 def auto_cancel_order_on_payment_failure(sender, instance, **kwargs):
     """
@@ -60,21 +60,26 @@ def handle_order_status_change(sender, instance, created, **kwargs):
                     "Order Updated",
                     f"Order #{instance.id} is now {instance.order_status}, payment: {instance.payment_status}"
             )
-
-# @receiver(m2m_changed, sender=Order.products.through)
-# def reduce_stock_on_order(sender, instance, action, pk_set, **kwargs):
-#     """
-#     Reduce product stock when products are added to an order.
-#     Assumes quantity = 1 per product in the order.
-#     """
-#     if action == "post_add":
-#         for product_id in pk_set:
-#             product = Product.objects.get(pk=product_id)
-#             if product.stock > 0:
-#                 product.stock -= 1
-#                 product.save(update_fields=["stock"])
-#             else:
-#                 # Not enough stock, cancel order
-#                 instance.order_status = "cancelled"
-#                 instance.save(update_fields=["order_status"])
-
+@receiver(post_save, sender=InventoryUpdateHistory)
+def create_inventory_update_notification(sender, instance, created, **kwargs):
+    """
+    Create a notification when inventory is updated.
+    """
+    if created:
+        instance.product.stock += instance.quantity
+        instance.product.save(update_fields=["stock"])
+        Notification.objects.create(
+            title="Inventory Updated",
+            message=(
+                f"Inventory for {instance.product.name} has been updated: {instance.quantity:+}."
+            ),
+            notification_type="admin",
+        )
+        # Optionally update the product stock
+        
+@receiver(pre_save, sender=Order)
+def set_distance_and_time(sender, instance, **kwargs):
+    if instance.latitude and instance.longitude:
+        distance, time = calculate_distance_and_time(instance.latitude, instance.longitude)
+        instance.distance_km = distance
+        instance.estimated_time_min = time

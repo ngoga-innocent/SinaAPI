@@ -80,15 +80,28 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
         ordering = ('name', 'created_at')
+
+class InventoryUpdateHistory(models.Model):
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='history')
+    industry_tracking_number=models.CharField(max_length=255, blank=True, null=True)
+    quantity = models.IntegerField()
+    reason = models.CharField(max_length=255, blank=True, null=True)
+    changed_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.product.name} {self.quantity:+} at {self.changed_at}"
+
 class FoodCategory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name=models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
     
     def __str__(self):
         return self.name
     class Meta:
-        verbose_name_plural='Food Categories'
-        ordering=['name']
+        verbose_name_plural = 'Food Categories'
+        ordering = ['name']
+
+
 class Food(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
@@ -131,6 +144,14 @@ class Order(models.Model):
     order_status=models.CharField(max_length=10, choices=ORDER_STATUS_CHOICES, default='pending')
     payment_status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='pending')
     preparation_time = models.PositiveIntegerField(default=0)  # In minutes
+    is_delivery = models.BooleanField(default=False)
+    
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    address = models.CharField(max_length=500, null=True, blank=True)   
+    
+    distance_km = models.FloatField(null=True, blank=True)   # distance to shop
+    estimated_time_min = models.PositiveIntegerField(null=True, blank=True)  # estimated travel time 
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

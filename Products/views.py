@@ -4,8 +4,8 @@ from rest_framework.views import APIView
 from django.db.models import Q
 from rest_framework import generics, permissions,status,serializers
 from decimal import Decimal
-from .models import Product, ProductCategory,ShopCategory,FoodCategory, Food,Order,Accompaniment,OrderItem
-from .serializers import ProductSerializer,ProductCategorySerializer,ShopCategorySerializer,FoodCategorySerializer,OrderSerializer
+from .models import Product, ProductCategory,ShopCategory,FoodCategory, Food,Order,Accompaniment,OrderItem,InventoryUpdateHistory
+from .serializers import ProductSerializer,ProductCategorySerializer,ShopCategorySerializer,FoodCategorySerializer,OrderSerializer,InventoryUpdateHistorySerializer
 from Auths.models import User
 from Payments.views import PaymentView
 from Payments.models import Payment
@@ -210,3 +210,7 @@ class ListOrderView(generics.ListAPIView):
     queryset=Order.objects.all().order_by('-created_at')
     serializer_class=OrderSerializer
     permissions_classes=[permissions.IsAdminUser]
+class CreateListInventoryHistory(generics.ListCreateAPIView):
+    queryset=InventoryUpdateHistory.objects.all().order_by('-changed_at')
+    serializer_class=InventoryUpdateHistorySerializer
+    permission_classes=[IsAdminUser]
