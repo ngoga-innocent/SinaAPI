@@ -45,6 +45,7 @@ class Notification(models.Model):
     NOTIFICATION_TYPES = (
         ("all", "All Users"),
         ("user", "Single User"),
+        ("staff", "Staff Only"),
     )
 
     title = models.CharField(max_length=255)
@@ -53,17 +54,22 @@ class Notification(models.Model):
         max_length=10, choices=NOTIFICATION_TYPES, default="all"
     )
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, null=True, blank=True,
-        related_name="notifications"
-    )  # Only set if notification_type == "user"
+        User,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="notifications",
+        help_text="Only set if notification_type == 'user'",
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.title} - {self.notification_type}"
+
 class DeviceToken(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="device_token")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank= True,related_name="device_token")
     expo_push_token = models.CharField(max_length=255)
 
     def __str__(self):
-        return f"{self.user.username} - {self.expo_push_token}"
+        return f"{self.expo_push_token}"

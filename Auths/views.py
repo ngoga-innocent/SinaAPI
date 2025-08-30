@@ -204,28 +204,34 @@ class NotificationListCreateView(generics.ListCreateAPIView):
             return Notification.objects.none()  # Return empty queryset on error
 
 class NotificationDetailView(generics.RetrieveUpdateDestroyAPIView):
-
     serializer_class = NotificationSerializer
     permission_classes = [permissions.IsAuthenticated]
+
     def get_queryset(self):
         user = self.request.user
         if user.is_staff:
-            return Notification.objects.all()
+            # Staff can only see notifications intended for staff or for all
+            return Notification.objects.filter(
+                models.Q(notification_type="staff") |
+                models.Q(notification_type="all")
+            )
+        # Regular user: only their notifications or all
         return Notification.objects.filter(
             models.Q(notification_type="user", user=user) |
             models.Q(notification_type="all")
         )
+
     def perform_update(self, serializer):
-        # Ensure user can only update their own notifications
         notification = self.get_object()
         if notification.notification_type == "user" and notification.user != self.request.user:
             raise PermissionError("You cannot update notifications that don't belong to you")
         serializer.save()
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def save_push_token(request):
     token = request.data.get("expo_push_token")
-
+    print(token)
     if not token:
         return Response({"error": "Missing token"}, status=status.HTTP_400_BAD_REQUEST)
 

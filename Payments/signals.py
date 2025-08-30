@@ -1,10 +1,11 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import Payment
-from Auths.models import User,Notification
+from Auths.models import User,Notification,DeviceToken
 from Products.models import Order
 from .views import PaymentView  # Import the updated view
 from django.db import transaction
+from Auths.push_Notification import send_push_notification
 @receiver(post_save, sender=Payment)
 def generate_qr_on_payment_save(sender, instance, created, **kwargs):
     if not instance.qr_code:  
@@ -47,9 +48,21 @@ def update_order_payment_status(sender, instance, **kwargs):
                     notification_type="user",
                     user=order.user
                 )
-                print(f"DEBUG: Notification sent to user {order.user.id} for order {order.id}")
-
-    
+                device_token = DeviceToken.objects.filter(user=order.user.id).first()
+                print(f"DEBUG: Retrieved device token for user {order.user.id}: {device_token}")
+                if device_token:
+                    try:
+                        send_push_notification(
+                            expo_push_token=str(device_token.expo_push_token),
+                            title="Order Payment Status Updated",
+                            message=f"Your order #{order.id} payment status changed to {instance.status}.",
+                            data={"screen": "/(app)/(tabs)/(Bus)/[id]", "params": {"id": str(order.id)}}
+                        )
+                    except Exception as e:
+                        print(f"ERROR: Failed to send push notification: {str(e)}")
+                    print(f"DEBUG: Device token found for user {order.user.id}: {device_token.expo_push_token}")
+                else:
+                    print(f"DEBUG: No device token found for user {order.user.id}")
 
     except Order.DoesNotExist:
         print(f"WARNING: No order found for payment {instance.id}")

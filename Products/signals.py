@@ -4,7 +4,7 @@ from django.db.models.signals import pre_save
 from Auths.push_Notification import send_push_notification
 from Products.calculate_distance_time import calculate_distance_and_time
 from .models import Order,Product,InventoryUpdateHistory
-from Auths.models import Notification
+from Auths.models import Notification,DeviceToken
 @receiver(post_save, sender=Order)
 def auto_cancel_order_on_payment_failure(sender, instance, **kwargs):
     """
@@ -54,12 +54,24 @@ def handle_order_status_change(sender, instance, created, **kwargs):
                 notification_type="user",
                 user=instance.user
             )
-            if instance.user.device_token:
+            # Safely check for device token
+            try:
+                device_token=DeviceToken.objects.get(user=instance.user).expo_push_token
+            except DeviceToken.DoesNotExist:
+                device_token = None
+            print("Device token",device_token)
+            if device_token:
                 send_push_notification(
-                    instance.user.device_token.expo_push_token,
+                    device_token,
                     "Order Updated",
                     f"Order #{instance.id} is now {instance.order_status}, payment: {instance.payment_status}"
-            )
+                )
+            else:
+                print(f"DEBUG: No device token for user {instance.user.id}, skipping push notification.")
+                pass
+                # Optionally log the missing token
+                # logger.warning(f"User {instance.user.id} has no device token, skipping push notification.")
+
 @receiver(post_save, sender=InventoryUpdateHistory)
 def create_inventory_update_notification(sender, instance, created, **kwargs):
     """

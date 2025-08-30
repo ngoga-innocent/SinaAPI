@@ -226,16 +226,30 @@ def checkPayment(request, payment_id):
    
 
 class ConfirmQrScan(APIView):
-    def post(self,request):
-        payment_id=request.data.get('payment_id')
-        
+    def post(self, request):
+        payment_id = request.data.get('payment_id')
+
         try:
-            payment=Payment.objects.get(id=payment_id)
+            payment = Payment.objects.get(id=payment_id)
+            print("is Scanned", payment.is_scanned)
+
             if payment.is_scanned:
-                return Response({"message":"Payment Already Scanned","valid":False,"data":PaymentSerializer(payment).data},status=200)
-            payment.is_scanned=True
-            payment_save=payment.save()
-            
-            return Response({"message":"Qr Code Scanned Correctly","valid":True,"data":PaymentSerializer(payment_save).data},status=201)
+                return Response({
+                    "message": "Payment Already Scanned",
+                    "valid": False,
+                    "data": PaymentSerializer(payment).data
+                }, status=200)
+            else:
+                payment.is_scanned = True
+                payment.save()  # save but don't assign
+                return Response({
+                    "message": "Qr Code Scanned Correctly",
+                    "valid": True,
+                    "data": PaymentSerializer(payment).data
+                }, status=201)
+
         except Payment.DoesNotExist:
-            return Response({"message":"Invalid Payment","valid":False},status=400)
+            return Response({
+                "message": "Invalid Payment",
+                "valid": False
+            }, status=400)

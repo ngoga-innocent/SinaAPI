@@ -115,7 +115,10 @@ class FoodCategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
 class OrderCreateAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     def get(self,request):
-        orders=Order.objects.filter(user=request.user)
+        if request.user.is_staff:
+            orders = Order.objects.filter(Q(order_status='paid') | Q(order_status='ready') | Q(order_status='rejected')).order_by('-created_at', 'order_status')
+        else:
+            orders = Order.objects.filter(user=request.user)
         serializer=OrderSerializer(orders,many=True,context={"request": request})
         return Response({"data": serializer.data}, status=200)
     def post(self, request):
@@ -127,7 +130,9 @@ class OrderCreateAPIView(APIView):
             accompaniment_ids = request.data.get('accompaniment_ids', [])
             phone_number = request.data.get("phone_number")
             amount = request.data.get("amount")
-
+            latitude = request.data.get("latitude")
+            longitude = request.data.get("longitude")
+            address = request.data.get("address")
             # Fetch products, foods, accompaniments
             product_ids = [p['id'] for p in product_data]
             products = Product.objects.filter(id__in=product_ids)
@@ -148,7 +153,10 @@ class OrderCreateAPIView(APIView):
                 user=request.user,
                 total_price=0,  # will calculate after adding items
                 payment_status="pending",
-                preparation_time=preparation_time
+                preparation_time=preparation_time,
+                latitude=latitude,
+                longitude=longitude,
+                address=address
             )
 
             # Create OrderItems and reduce stock

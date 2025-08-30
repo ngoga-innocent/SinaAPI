@@ -94,12 +94,13 @@ class OrderSerializer(serializers.ModelSerializer):
     order_payment_details = PaymentSerializer(source='order_payment', read_only=True)
     customer=UserSerializer(read_only=True,source='user')
     products = OrderItemSerializer(many=True, read_only=True,source='items')  # nested products with quantity
+    food = FoodSerializer(many=True, read_only=True,source='food_items')  # nested food items
 
     class Meta:
         model = Order
         fields = '__all__'
         read_only_fields = [
-            'id', 'user', 'total_price', 'created_at', 'order_payment_details','customer', 'products'
+            'id', 'user', 'total_price', 'created_at', 'order_payment_details','customer', 'products','food'
         ]
 class InventoryUpdateHistorySerializer(serializers.ModelSerializer):
     product_details = ProductSerializer(read_only=True)
