@@ -20,6 +20,7 @@ from rest_framework.decorators import api_view
 from .serilaizers import PaymentSerializer
 from rest_framework.permissions import IsAuthenticated,IsAdminUser
 import logging
+from Products.models import Order
 logger = logging.getLogger(__name__)
 load_dotenv()
 # UPDATING PAYMENT and Retrieving Payment Status
@@ -242,6 +243,13 @@ class ConfirmQrScan(APIView):
             else:
                 payment.is_scanned = True
                 payment.save()  # save but don't assign
+                order=Order.objects.get(order_payment=payment)
+                if payment.status=='completed':
+                    order.order_status='ready'
+                elif payment.status=='failed':
+                    order.order_status='cancelled'
+                order.save()
+                print(order.order_status)
                 return Response({
                     "message": "Qr Code Scanned Correctly",
                     "valid": True,
