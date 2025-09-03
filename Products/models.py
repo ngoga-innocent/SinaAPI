@@ -117,6 +117,16 @@ class Food(models.Model):
     class Meta:
         verbose_name_plural = 'Foods'
         ordering = ['name', 'created_at']
+class OrderPickupLocations(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    location_name = models.CharField(max_length=255,null=False, blank=False)
+    # address = models.CharField(max_length=500,null=False, blank=False)
+    latitude = models.FloatField(null=False, blank=False)
+    longitude = models.FloatField(null=False, blank=False)
+
+    def __str__(self):
+        return str(self.location_name)
+
 class Order(models.Model):
     PAYMENT_STATUS_CHOICES = [
         ('pending', 'Pending'),
@@ -145,11 +155,11 @@ class Order(models.Model):
     payment_status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='pending')
     preparation_time = models.PositiveIntegerField(default=0)  # In minutes
     is_delivery = models.BooleanField(default=False)
-    
+    pickup_location = models.ForeignKey(OrderPickupLocations, on_delete=models.SET_NULL, null=True, blank=True)
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
     address = models.CharField(max_length=500, null=True, blank=True)   
-    
+    clients_note=models.TextField(null=True, blank=True)
     distance_km = models.FloatField(null=True, blank=True)   # distance to shop
     estimated_time_min = models.PositiveIntegerField(null=True, blank=True)  # estimated travel time 
     created_at = models.DateTimeField(auto_now_add=True)

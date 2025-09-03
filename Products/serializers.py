@@ -1,4 +1,4 @@
-from .models import Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order,OrderItem,InventoryUpdateHistory
+from .models import OrderPickupLocations, Product,ProductCategory,ShopCategory,Accompaniment,Food,FoodCategory,Order,OrderItem,InventoryUpdateHistory
 from rest_framework import serializers
 from decimal import Decimal
 from Payments.serilaizers import PaymentSerializer
@@ -95,7 +95,11 @@ class OrderSerializer(serializers.ModelSerializer):
     customer=UserSerializer(read_only=True,source='user')
     products = OrderItemSerializer(many=True, read_only=True,source='items')  # nested products with quantity
     food = FoodSerializer(many=True, read_only=True,source='food_items')  # nested food items
-
+    pickup_location = serializers.PrimaryKeyRelatedField(
+        queryset=OrderPickupLocations.objects.all(),
+        allow_null=True,
+        required=False
+    )
     class Meta:
         model = Order
         fields = '__all__'
@@ -108,6 +112,7 @@ class InventoryUpdateHistorySerializer(serializers.ModelSerializer):
         model = InventoryUpdateHistory
         fields = ['id','quantity','industry_tracking_number','reason','changed_at', 'product','product_details']
 
-
-
-
+class OrderPickupLocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderPickupLocations
+        fields = ['id', 'location_name', 'latitude', 'longitude']

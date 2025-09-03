@@ -2,10 +2,11 @@ from urllib import request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.db.models import Q
+import uuid
 from rest_framework import generics, permissions,status,serializers
 from decimal import Decimal
-from .models import Product, ProductCategory,ShopCategory,FoodCategory, Food,Order,Accompaniment,OrderItem,InventoryUpdateHistory
-from .serializers import ProductSerializer,ProductCategorySerializer,ShopCategorySerializer,FoodCategorySerializer,OrderSerializer,InventoryUpdateHistorySerializer
+from .models import OrderPickupLocations, Product, ProductCategory,ShopCategory,FoodCategory, Food,Order,Accompaniment,OrderItem,InventoryUpdateHistory
+from .serializers import OrderPickupLocationSerializer, ProductSerializer,ProductCategorySerializer,ShopCategorySerializer,FoodCategorySerializer,OrderSerializer,InventoryUpdateHistorySerializer
 from Auths.models import User
 from Payments.views import PaymentView
 from Payments.models import Payment
@@ -124,7 +125,7 @@ class OrderCreateAPIView(APIView):
     def post(self, request):
         try:
             print("DEBUG: Request data received ->", request.data)
-
+            # Pick Up Locations
             product_data = request.data.get('products', [])  # [{"id": 1, "quantity": 2}]
             food_ids = request.data.get('food_ids', [])
             accompaniment_ids = request.data.get('accompaniment_ids', [])
@@ -133,6 +134,9 @@ class OrderCreateAPIView(APIView):
             latitude = request.data.get("latitude")
             longitude = request.data.get("longitude")
             address = request.data.get("address")
+            pickup_location_id = request.data.get("pickup_location")
+            client_notes = request.data.get("client_notes")
+            is_delivery = str(request.data.get("is_delivery", "false")).lower() == "true"
             # Fetch products, foods, accompaniments
             product_ids = [p['id'] for p in product_data]
             products = Product.objects.filter(id__in=product_ids)
@@ -147,8 +151,17 @@ class OrderCreateAPIView(APIView):
             max_food_time = foods.aggregate(Max('preparation_time'))['preparation_time__max'] or 0
             max_accomp_time = accompaniments.aggregate(Max('preparation_time'))['preparation_time__max'] or 0
             preparation_time = max(max_product_time, max_food_time, max_accomp_time)
-
+            # print(f"DEBUG: Max preparation times - Products: {pickup_location.id}, Foods: {max_food_time}, Accompaniments: {max_accomp_time}. Final: {preparation_time} mins")
             # Create the order first
+            # pickup_location_id = request.data.get("pickup_location")
+            pickup_location_id = request.data.get("pickup_location")
+            pickup_location = None
+
+            if pickup_location_id:
+                try:
+                    pickup_location = OrderPickupLocations.objects.get(id=pickup_location_id)
+                except OrderPickupLocations.DoesNotExist:
+                    return Response({"error": "Invalid pickup location ID"}, status=400)
             order = Order.objects.create(
                 user=request.user,
                 total_price=0,  # will calculate after adding items
@@ -156,8 +169,19 @@ class OrderCreateAPIView(APIView):
                 preparation_time=preparation_time,
                 latitude=latitude,
                 longitude=longitude,
-                address=address
+                address=address,
+                pickup_location=pickup_location,
+                is_delivery=is_delivery,
+                client_notes=client_notes
             )
+            # serializer = OrderSerializer(
+            #     order,
+            #     data={"pickup_location": pickup_location_id},  
+            #     partial=True,  
+            #     context={"request": request}
+            # )
+            # serializer.is_valid(raise_exception=True)
+            # serializer.save()
 
             # Create OrderItems and reduce stock
             total_price = 0
@@ -179,7 +203,7 @@ class OrderCreateAPIView(APIView):
             # Assign foods and accompaniments
             order.foods.set(foods)
             order.accompaniments.set(accompaniments)
-
+            
             # Update total price
             order.total_price = total_price
             order.save(update_fields=["total_price"])
@@ -222,3 +246,7 @@ class CreateListInventoryHistory(generics.ListCreateAPIView):
     queryset=InventoryUpdateHistory.objects.all().order_by('-changed_at')
     serializer_class=InventoryUpdateHistorySerializer
     permission_classes=[IsAdminUser]
+class OrderPickupLocationView(generics.ListAPIView):
+    queryset = OrderPickupLocations.objects.all().order_by('-id')
+    serializer_class = OrderPickupLocationSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]

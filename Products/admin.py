@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import InventoryUpdateHistory, ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order,OrderItem
+from .models import InventoryUpdateHistory, ShopCategory, ProductCategory, Product, Accompaniment,FoodCategory, Food,Order,OrderItem,OrderPickupLocations
 
 @admin.register(ShopCategory)
 class ShopCategoryAdmin(admin.ModelAdmin):
@@ -59,3 +59,4 @@ class OrderAdmin(admin.ModelAdmin):
         queryset = super().get_queryset(request)
         # print("Admin Panel Orders:", queryset)  # Debugging
         return queryset
+admin.site.register(OrderPickupLocations)

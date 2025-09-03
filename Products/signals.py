@@ -92,6 +92,22 @@ def create_inventory_update_notification(sender, instance, created, **kwargs):
 @receiver(pre_save, sender=Order)
 def set_distance_and_time(sender, instance, **kwargs):
     if instance.latitude and instance.longitude:
-        distance, time = calculate_distance_and_time(instance.latitude, instance.longitude)
+        if not instance.is_delivery and instance.pickup_location:
+            print("Calculating distance and time...", instance.pickup_location.id)
+
+            distance, time = calculate_distance_and_time(
+                instance.latitude,
+                instance.longitude,
+                instance.pickup_location.id,
+                
+            )
+        else:
+            print("Calculating distance and time without pickup location...")
+            distance, time = calculate_distance_and_time(
+                instance.latitude,
+                instance.longitude
+            )
+
         instance.distance_km = distance
         instance.estimated_time_min = time
+

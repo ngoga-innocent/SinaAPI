@@ -21,9 +21,73 @@ from .models import Notification,DeviceToken
 from .serializers import NotificationSerializer
 from django.db import models
 from rest_framework.decorators import api_view,permission_classes
+import requests
+import uuid
+import cloudinary.uploader
 # from rest_framework_simplejwt.tokens import RefreshToken
 User = get_user_model()
 # Create your views here.
+
+
+
+
+
+@api_view(["POST"])
+def google_login(request):
+    try:
+        google_token = request.data.get("token")
+        if not google_token:
+            return Response({"error": "Token is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Step 1: Verify token with Google
+        verify_url = f"https://oauth2.googleapis.com/tokeninfo?id_token={google_token}"
+        r = requests.get(verify_url)
+        if r.status_code != 200:
+            return Response({"error": "Invalid Google token"}, status=status.HTTP_401_UNAUTHORIZED)
+
+        data = r.json()
+        print(data)
+        email = data.get("email")
+        full_name = data.get("name")
+        picture = data.get("picture")
+        if not email:
+            return Response({"error": "No email found in Google token"}, status=status.HTTP_401_UNAUTHORIZED)
+
+        # Step 2: Get or create user
+        # image_response = requests.get(picture)
+        # if image_response.status_code == 200:
+        #     upload_result = cloudinary.uploader.upload(
+        #         image_response.content,
+        #         folder="profile_images",
+        #         public_id=f"google_{uuid.uuid4().hex[:8]}"
+        #     )
+        #     profile_url = upload_result["secure_url"]
+        # else:
+        #     profile_url = None
+        user, created = User.objects.get_or_create(
+            email=email,
+            defaults={
+                "phone_number": f"google_{uuid.uuid4().hex[:8]}",  # dummy unique phone number
+                "full_name": full_name or email.split("@")[0],
+                # "profile": profile_url
+            },
+        )
+
+        # Step 3: Generate or get DRF Token
+        token, _ = Token.objects.get_or_create(user=user)
+        serializer = UserSerializer(user)
+        return Response(
+            {
+                "created": created,
+                "token": token.key,
+                "user": serializer.data,
+            },
+            status=status.HTTP_200_OK,
+        )
+    except Exception as e:
+        print(e)
+        return Response({"error": "Google login failed"}, status=status.HTTP_400_BAD_REQUEST)
+
 class UserView(APIView):
     def get(self, request, *args, **kwargs):
         return Response(
