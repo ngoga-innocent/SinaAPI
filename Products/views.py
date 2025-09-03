@@ -135,7 +135,7 @@ class OrderCreateAPIView(APIView):
             longitude = request.data.get("longitude")
             address = request.data.get("address")
             pickup_location_id = request.data.get("pickup_location")
-            client_notes = request.data.get("client_notes")
+            client_notes = request.data.get("client_note")
             is_delivery = str(request.data.get("is_delivery", "false")).lower() == "true"
             # Fetch products, foods, accompaniments
             product_ids = [p['id'] for p in product_data]
@@ -172,7 +172,7 @@ class OrderCreateAPIView(APIView):
                 address=address,
                 pickup_location=pickup_location,
                 is_delivery=is_delivery,
-                client_notes=client_notes
+                clients_note=client_notes
             )
             # serializer = OrderSerializer(
             #     order,
